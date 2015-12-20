@@ -177,106 +177,205 @@
 
       <div class="body-wrap">
   
+    <article id="post-how-to-setup-jekyll-blog" class="article article-type-post" itemscope itemprop="blogPost">
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/how-to-setup-jekyll-blog/" class="archive-article-date">
-  	<time datetime="2015-11-29T04:16:28.000Z" itemprop="datePublished">Nov 29</time>
+    <div class="article-meta">
+      <a href="/2015/11/how-to-setup-jekyll-blog/" class="article-date">
+  	<time datetime="2015-11-29T04:16:28.000Z" itemprop="datePublished">2015-11-29</time>
 </a>
-        </div>
-    	 
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/how-to-setup-jekyll-blog/">how-to-setup-jekyll-blog</a>
+      <a class="article-title" href="/2015/11/how-to-setup-jekyll-blog/">how-to-setup-jekyll-blog</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="缘起">缘起</h3><p>Hexo对md语法的支持太让我不满意了，继续折腾，弄jekyll去。作为一个能用Ubuntu作为日常工具的程序员，我相信还是可以搞定的，copy&amp;&amp;plate大法用得好，问题都不是问题。</p>
+<h3 id="问题">问题</h3><p>1.rails无法安装</p>
+<p>因为天朝网络原因，需要更好源。<br>1 sudo gem sources –remove <a href="https://rubygems.org/" target="_blank" rel="external">https://rubygems.org/</a><br>2 sudo gem sources -a <a href="http://ruby.taobao.org/" target="_blank" rel="external">http://ruby.taobao.org/</a></p>
+<p>2.ERROR: Failed to build gem native extension.</p>
+<p>依赖不足<br>sudo apt-get install imagemagick libmagickwand-dev</p>
+<p>3.有问题，看日志<br>之前没有养成这个习惯，问题出来了瞎着急，其实看看日志，对症下药，一切都会好起来的。<br>程序员就是个解决问题的群体<br>mkmf.rb can’t find header files for ruby at /usr/lib/ruby/include/ruby.h<br>解决办法<br>yum install ruby-devel</p>
+<p>4.安装yum</p>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
   </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/ubuntu-skill/" class="archive-article-date">
-  	<time datetime="2015-11-29T02:25:17.000Z" itemprop="datePublished">Nov 29</time>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-ubuntu-skill" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/ubuntu-skill/" class="article-date">
+  	<time datetime="2015-11-29T02:25:17.000Z" itemprop="datePublished">2015-11-29</time>
 </a>
-        </div>
-    	 
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/ubuntu-skill/">ubuntu-skill</a>
+      <a class="article-title" href="/2015/11/ubuntu-skill/">ubuntu-skill</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="要有个开头">要有个开头</h3><p>情景是最大的生产力，本文记录Ubuntu系统自己的，我想在Ubuntu上安装软件时遇到的各种问题。<br>程序员就是要不怕折腾，感谢Ubuntu一直给我折腾的机会，让我心平气和，好好学习。</p>
+<blockquote>
+<p>电脑情况<br>系统:Ubuntu 15.10<br>硬件:Asus</p>
+</blockquote>
+<p><strong>1.查找磁盘上大于20MB的文件</strong></p>
+<blockquote>
+<p>find / -size +20000k -exec ls -lh {} \;</p>
+</blockquote>
+<p><strong>2.增强gedit配置</strong></p>
+<blockquote>
+<p>下载<a href="https://github.com/ivyl/gedit-mate的压缩包" target="_blank" rel="external">https://github.com/ivyl/gedit-mate的压缩包</a><br>解压之后在当前目录开启terminal，运行 ./install.sh<br>之后就可以通过 g filename.filetype来更快捷地新建/打完文件了<br>Edit - Preferences - Fonts &amp; Colors 选择自己喜欢的字体和主题吧（有gmate字眼的是新增的）</p>
+</blockquote>
+<p><strong>3.权限</strong></p>
+<blockquote>
+<p>sudo su 进入超级管理员模式<br>exit  /logout  /ctrl + D /重新登录/关闭当前terminal 可以退出超级管理员模式</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
+    
   </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/hello-world/" class="archive-article-date">
-  	<time datetime="2015-11-28T02:25:17.000Z" itemprop="datePublished">Nov 28</time>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/hello-world/" class="article-date">
+  	<time datetime="2015-11-28T02:25:17.000Z" itemprop="datePublished">2015-11-28</time>
 </a>
-        </div>
-    	 
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/hello-world/">我归来了</a>
+      <a class="article-title" href="/2015/11/hello-world/">我归来了</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </header>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="过去">过去</h3><p>从2月份起，博客停止更新，更在8月份的时候做了一次清空，一次我自己都没有备份的清空。些许时候，就是这么希望可以和过去说不再见。过去的这几个月，我的人生经历了很多事情，种种原因我在此就不一一细说了。转身的时候心中还是有一些恐慌了，因为我们都是会对未知恐惧的生物，好在我一直比较自恋，这些日子也就这么顺顺当当地走下来了，待我心平气静时，这些经历也是可以慢慢诉说的。</p>
+<h3 id="现在">现在</h3><p>如今的我，窝居在深圳桃园一个5平米的小屋子里，选择这样的一个地方是不想把自己的时间花在上下班的路上，也是一种用金钱购买时间的方式。<br>如今的我，是一个在深圳南山区的Android程序员，虽然已经毕业两年多了，想想过去，自己好像也没成长多少，少年需努力啊。<br>如今的我，脾气很好，心境很好，自恋。</p>
+<h3 id="未来">未来</h3><p>如我此站标题所言，编程/设计/幽默，会是我之后投诸精力的领域，与自己对话，与机器对话。说一辈子太久，我只想每天都有进步，睡觉踏实，早日到达能把一件事情做好的境界。</p>
+<p><strong>编程</strong></p>
+<ul>
+<li>Android/Python/Nodejs</li>
+</ul>
+<p><strong>设计</strong></p>
+<ul>
+<li>视觉效果等等</li>
+</ul>
+<p><strong>幽默</strong></p>
+<ul>
+<li>我其实是个段子手</li>
+</ul>
 
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
 </div>
       <footer id="footer">
   <div class="outer">
