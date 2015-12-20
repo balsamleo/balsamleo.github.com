@@ -7,30 +7,24 @@
   <title>Javascript学习1219 | 保的城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1.键值对/对象键值对：键可能多次定义，但在特定context中只有唯一的一个值。值本身可能也是键值对。对象：键值对的集合
-
 12345678Address:&amp;#123;	Street:&apos;Main&apos;,	Number:100,	Apartment:&amp;#123;		Floor:3,		Number:301	&amp;#125;&amp;#125;
 Address是一个对象
-
-2.全局作用域，全局对象js代码一旦执行，">
+2.全局作用域，全局对象js代码一旦执行，就产">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript学习1219">
 <meta property="og:url" content="http:www.balsam.xyz/2015/12/javascript-one/index.html">
 <meta property="og:site_name" content="保的城">
 <meta property="og:description" content="1.键值对/对象键值对：键可能多次定义，但在特定context中只有唯一的一个值。值本身可能也是键值对。对象：键值对的集合
-
 12345678Address:&amp;#123;	Street:&apos;Main&apos;,	Number:100,	Apartment:&amp;#123;		Floor:3,		Number:301	&amp;#125;&amp;#125;
 Address是一个对象
-
-2.全局作用域，全局对象js代码一旦执行，">
-<meta property="og:updated_time" content="2015-12-19T08:15:38.079Z">
+2.全局作用域，全局对象js代码一旦执行，就产">
+<meta property="og:updated_time" content="2015-12-20T12:27:46.591Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript学习1219">
 <meta name="twitter:description" content="1.键值对/对象键值对：键可能多次定义，但在特定context中只有唯一的一个值。值本身可能也是键值对。对象：键值对的集合
-
 12345678Address:&amp;#123;	Street:&apos;Main&apos;,	Number:100,	Apartment:&amp;#123;		Floor:3,		Number:301	&amp;#125;&amp;#125;
 Address是一个对象
-
-2.全局作用域，全局对象js代码一旦执行，">
+2.全局作用域，全局对象js代码一旦执行，就产">
   
     <link rel="alternative" href="/atom.xml" title="保的城" type="application/atom+xml">
   
@@ -125,7 +119,7 @@ Address是一个对象
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/30天js/" style="font-size: 10px;">30天js</a> <a href="/tags/Angular/" style="font-size: 20px;">Angular</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
+						<a href="/tags/30天js/" style="font-size: 20px;">30天js</a> <a href="/tags/Angular/" style="font-size: 20px;">Angular</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
 					</div>
 				</section>
 				
@@ -228,52 +222,28 @@ Address是一个对象
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>1.键值对/对象<br>键值对：键可能多次定义，但在特定context中只有唯一的一个值。值本身可能也是键值对。<br>对象：键值对的集合</li>
-</ul>
+        <h2 id="1-键值对/对象">1.键值对/对象</h2><p>键值对：键可能多次定义，但在特定context中只有唯一的一个值。值本身可能也是键值对。<br>对象：键值对的集合</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">Address</span>:<span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">Street</span>:<span class="value"><span class="string">'Main'</span>,</span><br><span class="line">	Number:<span class="number">100</span>,</span><br><span class="line">	Apartment:&#123;</span><br><span class="line">		Floor:<span class="number">3</span>,</span><br><span class="line">		Number:<span class="number">301</span></span><br><span class="line">	</span></span></span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Address是一个对象</p>
-<ul>
-<li>2.全局作用域，全局对象<br>js代码一旦执行，就产生了‘全局对象’和‘this’</li>
-</ul>
+<h2 id="2-全局作用域，全局对象">2.全局作用域，全局对象</h2><p>js代码一旦执行，就产生了‘全局对象’和‘this’</p>
 <p>在浏览器中 this===window===frames</p>
-<ul>
-<li>3.执行上下文，变量提升</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">b();</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello World'</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Called b!'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出：</span></span><br><span class="line">Called b!</span><br><span class="line"><span class="literal">undefined</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-执行上下文，变量提升">3.执行上下文，变量提升</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">b();</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello World'</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Called b!'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出：</span></span><br><span class="line">Called b!</span><br><span class="line"><span class="literal">undefined</span></span><br></pre></td></tr></table></figure>
 <p>变量提升的原因:</p>
 <p>Creation Phase(创建阶段)：<br>    ‘this’,外部环境，为变量和函数申请内存</p>
 <p>在代码执行前，变量和函数在内存中已经存在了，代码的执行是一行一行的，a已经在内存中存在了，但是解释器不知道变量a的具体内容，所以显示’undefined’，如果是a不定义，则显示’Uncaught ReferenceError’(因为a在内存中不存在)</p>
 <p><strong>Javascript中，初始化值都是undefined</strong>,undefined是一种特殊值</p>
 <p>Execution Phase(执行阶段):<br>    链接-编译-解释-执行</p>
-<ul>
-<li><p>4.函数调用和Execution Stack(执行栈)<br>使用()来调用函数，将调用的函数放在执行栈的最上方，执行完毕弹出栈。</p>
-</li>
-<li><p>5.函数，上下文，变量环境,作用域(scope)</p>
-</li>
-</ul>
-<p>变量环境：变量存在的内存空间，在内存中的相互关系</p>
+<h2 id="4-函数调用和Execution_Stack(执行栈)">4.函数调用和Execution Stack(执行栈)</h2><p>使用()来调用函数，将调用的函数放在执行栈的最上方，执行完毕弹出栈。</p>
+<h2 id="5-函数，上下文，变量环境,作用域(scope)">5.函数，上下文，变量环境,作用域(scope)</h2><p>变量环境：变量存在的内存空间，在内存中的相互关系</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myVar = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(myVar);</span><br><span class="line">a();</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"><span class="number">1</span>,</span><br><span class="line"><span class="number">2</span>,</span><br><span class="line"><span class="literal">undefined</span></span><br></pre></td></tr></table></figure>
 <p>因为先输出全局的myVar=1,然后是a()中的myVar=2,然后是b()中的myvar(undefined).</p>
-<ul>
-<li>6.作用域链(The Scope Chain)</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar=<span class="number">2</span>;</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myVar = <span class="number">1</span>;</span><br><span class="line">a();</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出为：</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-作用域链(The_Scope_Chain)">6.作用域链(The Scope Chain)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar=<span class="number">2</span>;</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myVar = <span class="number">1</span>;</span><br><span class="line">a();</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出为：</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>从词法上来说，b()是在全局环境之上的，与a()同级。b()的外部环境是全局环境，所以它会去获取全局变量myVar的值，也就是1.</p>
-<ul>
-<li>7.作用域,ES6和let</li>
-</ul>
-<p>代码块<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">  <span class="keyword">let</span> <span class="built_in">c</span>=<span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>8.回调</li>
-</ul>
-<p>链接器/网络请求/引擎，之间的交互是异步的，只是引擎中的js是同步执行的。</p>
+<h2 id="7-作用域,ES6和let">7.作用域,ES6和let</h2><p>代码块<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">  <span class="keyword">let</span> <span class="built_in">c</span>=<span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="8-回调">8.回调</h2><p>链接器/网络请求/引擎，之间的交互是异步的，只是引擎中的js是同步执行的。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// long running function</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">waitThreeSeconds</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> ms= <span class="number">3000</span>+ <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">  <span class="keyword">while</span>(<span class="keyword">new</span> <span class="built_in">Date</span>()&lt;ms)&#123;&#125;;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'finished function'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clickHandler</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'click event'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//listen for the click event</span></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>,clickHandler);</span><br><span class="line"></span><br><span class="line">waitThreeSeconds();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'finished Execution'</span>);</span><br><span class="line"><span class="comment">//输出结果:</span></span><br><span class="line">finished <span class="function"><span class="keyword">function</span></span><br><span class="line"><span class="title">finished</span> <span class="title">Execution</span> </span><br><span class="line"><span class="title">click</span> <span class="title">event</span></span></span><br></pre></td></tr></table></figure>
 <p>所有js代码执行之后，引擎会去监听事件队列，按顺序执行队列中的事件。（3秒内点击产生clickHandler，也是同样的执行顺序，3秒之后点击产生clickHandler则是马上执行，因为堆栈以及为空，可以处理事件队列）</p>
-<ul>
-<li>9.Javascript数据类型</li>
-</ul>
-<p>动态类型，引擎会在执行代码时自己判断</p>
+<h2 id="9-Javascript数据类型">9.Javascript数据类型</h2><p>动态类型，引擎会在执行代码时自己判断</p>
 <p>6种基本数据类型（不是对象）</p>
 <blockquote>
 <p>1.undefined,变量未赋值<br>2.null, 变量值未null<br>3.boolean, true和false<br>4.Number，js只有浮点数数字类型<br>5.string，字符串 ‘’,””都可以用<br>6.symbol，ES6中可用</p>
