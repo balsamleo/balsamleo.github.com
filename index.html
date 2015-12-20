@@ -177,6 +177,48 @@
 
       <div class="body-wrap">
   
+    <article id="post-Angular学习2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/20/Angular学习2/" class="article-date">
+  	<time datetime="2015-12-20T04:17:50.810Z" itemprop="datePublished">2015-12-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-多个控制器多个视图(Multiple_Controllers,Multiple_Views)">1.多个控制器多个视图(Multiple Controllers,Multiple Views)</h4><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">myApp.controller(<span class="string">"mainController"</span>,[<span class="string">'$scope'</span>,<span class="string">'$filter'</span>,<span class="string">'$http'</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>,<span class="variable">$log</span>,<span class="variable">$timeout</span>,<span class="variable">$filter</span>,<span class="variable">$http</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name=<span class="string">'main'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line">myApp.controller(<span class="string">'secondController'</span>,[<span class="string">"$scope"</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name = <span class="string">'second'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"mainController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"secondController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="2-单页面应用和哈希(Single_Page_Apps_and_the_Hash)">2.单页面应用和哈希(Single Page Apps and the Hash)</h4>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-javascript-one" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
