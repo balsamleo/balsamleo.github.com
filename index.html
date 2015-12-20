@@ -9,7 +9,7 @@
   <meta name="description" content="编程|设计|幽默">
 <meta property="og:type" content="website">
 <meta property="og:title" content="保的城">
-<meta property="og:url" content="http:balsam.xyz/index.html">
+<meta property="og:url" content="http:www.balsam.xyz/index.html">
 <meta property="og:site_name" content="保的城">
 <meta property="og:description" content="编程|设计|幽默">
 <meta name="twitter:card" content="summary">
@@ -180,19 +180,21 @@
     <article id="post-angular-learn-2" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/20/angular-learn-2/" class="article-date">
+      <a href="/2015/12/angular-learn-2/" class="article-date">
   	<time datetime="2015-12-20T04:23:08.000Z" itemprop="datePublished">2015-12-20</time>
 </a>
     </div>
   
   <div class="article-inner">
     
+      <input type="hidden" class="isFancy" />
+    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/20/angular-learn-2/">Angular学习2</a>
+      <a class="article-title" href="/2015/12/angular-learn-2/">Angular学习2</a>
     </h1>
   
 
@@ -229,6 +231,21 @@
 <p>这一节不是太理解，做项目遇到了再仔细回顾吧.<br>重点是理解@等符号</p>
 <figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">myApp.directive(<span class="string">"searchResult"</span>,function()&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    restrict: '<span class="type">AE</span>',</span><br><span class="line">    templateUrl: 'directives/searchresult.html',</span><br><span class="line">    replace: <span class="literal">true</span>,</span><br><span class="line">    scope: &#123;</span><br><span class="line">      personObject: <span class="string">"="</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">//main.html</span><br><span class="line">&lt;h3&gt;<span class="type">Search</span> <span class="type">Results</span>&lt;/h3&gt;</span><br><span class="line">&lt;<span class="keyword">div</span> class=<span class="string">"list-group"</span>&gt;</span><br><span class="line">  &lt;search-<span class="literal">result</span> person-<span class="keyword">object</span>=<span class="string">"person"</span>&gt;&lt;/search-<span class="literal">result</span>&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line"></span><br><span class="line">//serachresult.html</span><br><span class="line">&lt;a href=<span class="string">"#"</span> class=<span class="string">"list-group-item"</span>&gt;</span><br><span class="line">  &lt;h4 class=<span class="string">"list-group-item-heading"</span>&gt;&#123;&#123; personObject.name &#125;&#125;&lt;/h4&gt;</span><br><span class="line">  &lt;p class=<span class="string">"list-group-item-text"</span>&gt;&#123;&#123; personObject.address &#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 <p>总结一下就是<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">myApp</span><span class="class">.directive</span>中使用<span class="tag">scope</span>时需要做一些操作，如果是传递字符串使用<span class="at_rule">@<span class="keyword">，如果是传递对象使用=，</span></span><br><span class="line">相应的V中，如果是字符串使用<span class="string">"&#123;&#123; something &#125;&#125;"</span>，如果是对象直接<span class="string">"object"</span>.</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">//app.js</span><br><span class="line">var myApp=angular.module(<span class="string">'myApp'</span>,[<span class="string">'ngRoute'</span>]);</span><br><span class="line">myApp.config(<span class="keyword">function</span>(<span class="variable">$routeProvider</span>)&#123;</span><br><span class="line">  <span class="variable">$routeProvider</span></span><br><span class="line">  .when(<span class="string">'/'</span>,&#123;</span><br><span class="line">    templateUrl: <span class="string">'pages/main.html'</span>,</span><br><span class="line">    controller:<span class="string">'mainController'</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .when(<span class="string">'/second/:num'</span>,&#123;</span><br><span class="line">    templateUrl: <span class="string">'pages/second.html'</span>,</span><br><span class="line">    controller: <span class="string">'secondController'</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">myApp.service(<span class="string">'nameService'</span>,<span class="keyword">function</span>()&#123;</span><br><span class="line">  var self = this;</span><br><span class="line">  this.name = <span class="string">'John Doe'</span>;</span><br><span class="line">  this.namelength = function()&#123;</span><br><span class="line">    return self.name.length;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">myApp.controller(<span class="string">"mainController"</span>,[<span class="string">'$scope'</span>,<span class="string">'$location'</span>,<span class="string">'$log'</span>,<span class="string">'nameService'</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>,<span class="variable">$location</span>,<span class="variable">$log</span>,nameService)&#123;</span><br><span class="line">  <span class="variable">$log</span>.info(nameService.namelength());</span><br><span class="line">  <span class="variable">$scope</span>.name = nameService.name;</span><br><span class="line">  <span class="variable">$scope</span>.<span class="variable">$watch</span>(<span class="string">'name'</span>,function()&#123;</span><br><span class="line">    nameService.name=<span class="variable">$scope</span>.name;</span><br><span class="line">  &#125;);</span><br><span class="line">  </span><br><span class="line">  <span class="variable">$scope</span>.person=&#123;</span><br><span class="line">    name: <span class="string">'John Doe'</span>,</span><br><span class="line">    address: <span class="string">'555 Main St.,'</span>,</span><br><span class="line">    city: <span class="string">'New York'</span>,</span><br><span class="line">    state: <span class="string">'NY'</span>,</span><br><span class="line">    zip: <span class="string">'11111'</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="variable">$scope</span>.formattedAddress = function(person)&#123;</span><br><span class="line">    return person.address +<span class="string">', '</span>+person.city+<span class="string">', '</span>+person.state+<span class="string">', '</span>+person.zip;</span><br><span class="line">  &#125;;</span><br><span class="line">  </span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">myApp.directive(<span class="string">"searchResult"</span>,<span class="keyword">function</span>()&#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    restrict: <span class="string">'AECM'</span>,</span><br><span class="line">    templateUrl: <span class="string">'directives/searchresult.html'</span>,</span><br><span class="line">    replace: true,</span><br><span class="line">    scope: &#123;</span><br><span class="line">      personObject: <span class="string">"="</span>,</span><br><span class="line">      formattedAddressFunction: <span class="string">"&amp;"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">//main.html</span><br><span class="line">&lt;h3&gt;Search Results&lt;/h3&gt;</span><br><span class="line">&lt;div class=<span class="string">"list-group"</span>&gt;</span><br><span class="line">  &lt;search-result person-object=<span class="string">"person"</span> formatted-address-function=<span class="string">"formattedAddress(aperson)"</span>&gt;&lt;/search-result&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">//serachresult.html</span><br><span class="line">&lt;a href=<span class="string">"#"</span> class=<span class="string">"list-group-item"</span>&gt;</span><br><span class="line">  &lt;h4 class=<span class="string">"list-group-item-heading"</span>&gt;&#123;&#123; personObject.name &#125;&#125;&lt;/h4&gt;</span><br><span class="line">  &lt;p class=<span class="string">"list-group-item-group"</span>&gt;</span><br><span class="line">    &#123;&#123; formattedAddressFunction(&#123; aperson: personObject &#125;) &#125;&#125;</span><br><span class="line">  &lt;/p&gt;</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>重复类似元素<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//main.html</span><br><span class="line">&lt;h3&gt;<span class="type">Search</span> <span class="type">Results</span>&lt;/h3&gt;</span><br><span class="line">&lt;<span class="keyword">div</span> class=<span class="string">"list-group"</span>&gt;</span><br><span class="line">  &lt;search-<span class="literal">result</span> person-<span class="keyword">object</span>=<span class="string">"person"</span> formatted-address-function=<span class="string">"formattedAddress(aperson)"</span> ng-repeat=<span class="string">"person in people"</span>&gt;&lt;/search-<span class="literal">result</span>&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这样，更接近真实生产环境。</p>
+<h2 id="8-链接编译(link_and_compile)">8.链接编译(link and compile)</h2><p>编译器将代码转成底层语言，然后链接器会生成计算机能理解的文件。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">myApp.directive(<span class="string">"searchResult"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    restrict: <span class="string">'AECM'</span>,</span><br><span class="line">    templateUrl: <span class="string">'directives/searchresult.html'</span>,</span><br><span class="line">    replace: <span class="literal">true</span>,</span><br><span class="line">    scope: &#123;</span><br><span class="line">      personObject: <span class="string">"="</span>,</span><br><span class="line">      formattedAddressFunction: <span class="string">"&amp;"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    compile: <span class="function"><span class="keyword">function</span>(<span class="params">elem,attrs</span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"Compiling...."</span>)</span><br><span class="line">      <span class="built_in">console</span>.log(elem.html());</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        pre: <span class="function"><span class="keyword">function</span>(<span class="params">scope,element,attrs</span>)</span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">'Pre-linking...'</span>)</span><br><span class="line">          <span class="built_in">console</span>.log(element);</span><br><span class="line">        &#125;,</span><br><span class="line">        </span><br><span class="line">        post: <span class="function"><span class="keyword">function</span>(<span class="params">scope,element,attrs</span>)</span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">'Post-linking....'</span>)</span><br><span class="line">          <span class="built_in">console</span>.log(element);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>compile只运行一次，linker则是有几个元素运行几次，可以在运行时对DOM树进行操作。</p>
+<p>把compile换成initialize(初始化),post换成onbind(绑定)也许更能好好理解。</p>
+<p>我们几乎很少会去使用上面那种方式，更通用的方式是使用link<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">myApp.directive(<span class="string">"searchResult"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    restrict: <span class="string">'AECM'</span>,</span><br><span class="line">    templateUrl: <span class="string">'directives/searchresult.html'</span>,</span><br><span class="line">    replace: <span class="literal">true</span>,</span><br><span class="line">    scope: &#123;</span><br><span class="line">      personObject: <span class="string">"="</span>,</span><br><span class="line">      formattedAddressFunction: <span class="string">"&amp;"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    link: <span class="function"><span class="keyword">function</span>(<span class="params">scope,elements,attrs</span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'Linking...'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这种操作一般也是在HTML无法完成的情况下才会去使用。</p>
+<h2 id="9-内嵌(Transclusion)">9.内嵌(Transclusion)</h2><p>在一个文档内包含另一个文档<br>place a copy of one document at a particular point inside another.</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//app.js</span><br><span class="line">myApp.directive(<span class="string">"searchResult"</span>,function()&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    restrict: '<span class="type">AECM</span>',</span><br><span class="line">    templateUrl: 'directives/searchresult.html',</span><br><span class="line">    replace: <span class="literal">true</span>,</span><br><span class="line">    scope: &#123;</span><br><span class="line">      personObject: <span class="string">"="</span>,</span><br><span class="line">      formattedAddressFunction: <span class="string">"&amp;"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    link: function(scope,elements,attrs)&#123;</span><br><span class="line">      console.log('<span class="type">Linking</span>...');</span><br><span class="line">    &#125;,</span><br><span class="line">    transclude: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">//main.html</span><br><span class="line">&lt;h3&gt;<span class="type">Search</span> <span class="type">Results</span>&lt;/h3&gt;</span><br><span class="line">&lt;<span class="keyword">div</span> class=<span class="string">"list-group"</span>&gt;</span><br><span class="line">  &lt;search-<span class="literal">result</span> person-<span class="keyword">object</span>=<span class="string">"person"</span> formatted-address-function=<span class="string">"formattedAddress(aperson)"</span> ng-repeat=<span class="string">"person in people"</span>&gt;&lt;/search-<span class="literal">result</span>&gt;</span><br><span class="line">    *search results may <span class="keyword">not</span> be valid.</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line"></span><br><span class="line">//searchresult.html</span><br><span class="line">&lt;a href=<span class="string">"#"</span> class=<span class="string">"list-group-item"</span>&gt;</span><br><span class="line">  &lt;h4 class=<span class="string">"list-group-item-heading"</span>&gt;&#123;&#123; personObject.name &#125;&#125;&lt;/h4&gt;</span><br><span class="line">  &lt;p class=<span class="string">"list-group-item-group"</span>&gt;</span><br><span class="line">    &#123;&#123; formattedAddressFunction(&#123; aperson: personObject &#125;) &#125;&#125;</span><br><span class="line">  &lt;/p&gt;</span><br><span class="line">  &lt;small&gt;&lt;ng-transclude&gt;&lt;/ng-transclude&gt;&lt;/small&gt;</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>步骤是1.在directive中增加transclude: true属性，在main中增加固定的内容，在具体模板中使用ng-transclude</p>
+<hr>
+<p>至此，<a href="https://www.udemy.com/learn-angularjs/" target="_blank" rel="external">Learn and Understand Angular</a>学习结束，感谢这位老师，确实深入浅出，厉害厉害。</p>
+<p>接下来，一天一个实例，把AngularJS的姿势涨起来。</p>
 
       
     </div>
@@ -262,19 +279,21 @@
     <article id="post-angular-learn-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/19/angular-learn-1/" class="article-date">
+      <a href="/2015/12/angular-learn-1/" class="article-date">
   	<time datetime="2015-12-19T10:59:28.000Z" itemprop="datePublished">2015-12-19</time>
 </a>
     </div>
   
   <div class="article-inner">
     
+      <input type="hidden" class="isFancy" />
+    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/19/angular-learn-1/">Angular学习1</a>
+      <a class="article-title" href="/2015/12/angular-learn-1/">Angular学习1</a>
     </h1>
   
 
@@ -428,19 +447,21 @@
     <article id="post-javascript-one" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/19/javascript-one/" class="article-date">
+      <a href="/2015/12/javascript-one/" class="article-date">
   	<time datetime="2015-12-19T07:40:03.000Z" itemprop="datePublished">2015-12-19</time>
 </a>
     </div>
   
   <div class="article-inner">
     
+      <input type="hidden" class="isFancy" />
+    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/19/javascript-one/">Javascript学习1219</a>
+      <a class="article-title" href="/2015/12/javascript-one/">Javascript学习1219</a>
     </h1>
   
 
@@ -532,19 +553,21 @@
     <article id="post-how-to-setup-jekyll-blog" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/29/how-to-setup-jekyll-blog/" class="article-date">
+      <a href="/2015/11/how-to-setup-jekyll-blog/" class="article-date">
   	<time datetime="2015-11-29T04:16:28.000Z" itemprop="datePublished">2015-11-29</time>
 </a>
     </div>
   
   <div class="article-inner">
     
+      <input type="hidden" class="isFancy" />
+    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/29/how-to-setup-jekyll-blog/">how-to-setup-jekyll-blog</a>
+      <a class="article-title" href="/2015/11/how-to-setup-jekyll-blog/">how-to-setup-jekyll-blog</a>
     </h1>
   
 
@@ -589,19 +612,21 @@
     <article id="post-ubuntu-skill" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/29/ubuntu-skill/" class="article-date">
+      <a href="/2015/11/ubuntu-skill/" class="article-date">
   	<time datetime="2015-11-29T02:25:17.000Z" itemprop="datePublished">2015-11-29</time>
 </a>
     </div>
   
   <div class="article-inner">
     
+      <input type="hidden" class="isFancy" />
+    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/29/ubuntu-skill/">ubuntu-skill</a>
+      <a class="article-title" href="/2015/11/ubuntu-skill/">ubuntu-skill</a>
     </h1>
   
 
@@ -659,19 +684,21 @@
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/28/hello-world/" class="article-date">
+      <a href="/2015/11/hello-world/" class="article-date">
   	<time datetime="2015-11-28T02:25:17.000Z" itemprop="datePublished">2015-11-28</time>
 </a>
     </div>
   
   <div class="article-inner">
     
+      <input type="hidden" class="isFancy" />
+    
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/28/hello-world/">我归来了</a>
+      <a class="article-title" href="/2015/11/hello-world/">我归来了</a>
     </h1>
   
 
@@ -737,10 +764,12 @@
 </footer>
     </div>
     
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
 
 <script>
 	var yiliaConfig = {
-		fancybox: false,
+		fancybox: true,
 		mathjax: true,
 		animate: true,
 		isHome: true,
