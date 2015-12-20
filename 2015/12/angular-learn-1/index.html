@@ -6,16 +6,49 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Angular学习1 | 保的城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Angular学习第一篇，好好学习。内容包括1.模块和控制器 2.依赖注入 3.scope 4.函数和字符串 5.数组和函数 6.作用域和插值 7.指令和双向绑定 8.事件循环 9.观察者和消费循环  10.通用指令 11.XHR">
+  <meta name="description" content="Angular学习第一篇，好好学习。内容包括1.模块和控制器 2.依赖注入 3.scope 4.函数和字符串 5.数组和函数 6.作用域和插值 7.指令和双向绑定 8.事件循环 9.观察者和消费循环  10.通用指令 11.XHR
+1.理念
+Modelvar fistname = ‘Tony’
+
+View
+1&amp;lt;h1&amp;gt;Tony&amp;lt;/h1&amp;gt;
+
+*
+
+
+以上就是MV*架构
+2.自定">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular学习1">
 <meta property="og:url" content="http:www.balsam.xyz/2015/12/angular-learn-1/index.html">
 <meta property="og:site_name" content="保的城">
-<meta property="og:description" content="Angular学习第一篇，好好学习。内容包括1.模块和控制器 2.依赖注入 3.scope 4.函数和字符串 5.数组和函数 6.作用域和插值 7.指令和双向绑定 8.事件循环 9.观察者和消费循环  10.通用指令 11.XHR">
-<meta property="og:updated_time" content="2015-12-20T09:39:53.096Z">
+<meta property="og:description" content="Angular学习第一篇，好好学习。内容包括1.模块和控制器 2.依赖注入 3.scope 4.函数和字符串 5.数组和函数 6.作用域和插值 7.指令和双向绑定 8.事件循环 9.观察者和消费循环  10.通用指令 11.XHR
+1.理念
+Modelvar fistname = ‘Tony’
+
+View
+1&amp;lt;h1&amp;gt;Tony&amp;lt;/h1&amp;gt;
+
+*
+
+
+以上就是MV*架构
+2.自定">
+<meta property="og:updated_time" content="2015-12-20T09:44:42.268Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular学习1">
-<meta name="twitter:description" content="Angular学习第一篇，好好学习。内容包括1.模块和控制器 2.依赖注入 3.scope 4.函数和字符串 5.数组和函数 6.作用域和插值 7.指令和双向绑定 8.事件循环 9.观察者和消费循环  10.通用指令 11.XHR">
+<meta name="twitter:description" content="Angular学习第一篇，好好学习。内容包括1.模块和控制器 2.依赖注入 3.scope 4.函数和字符串 5.数组和函数 6.作用域和插值 7.指令和双向绑定 8.事件循环 9.观察者和消费循环  10.通用指令 11.XHR
+1.理念
+Modelvar fistname = ‘Tony’
+
+View
+1&amp;lt;h1&amp;gt;Tony&amp;lt;/h1&amp;gt;
+
+*
+
+
+以上就是MV*架构
+2.自定">
   
     <link rel="alternative" href="/atom.xml" title="保的城" type="application/atom+xml">
   
@@ -213,7 +246,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Angular学习第一篇，好好学习。<br>内容包括1.模块和控制器 2.依赖注入 3.scope 4.函数和字符串 5.数组和函数 6.作用域和插值 7.指令和双向绑定 8.事件循环 9.观察者和消费循环  10.通用指令 11.XHR<br><a id="more"></a></p>
+        <p>Angular学习第一篇，好好学习。<br>内容包括1.模块和控制器 2.依赖注入 3.scope 4.函数和字符串 5.数组和函数 6.作用域和插值 7.指令和双向绑定 8.事件循环 9.观察者和消费循环  10.通用指令 11.XHR</p>
 <h2 id="1-理念">1.理念</h2><ul>
 <li><p>Model<br>var fistname = ‘Tony’</p>
 </li>
@@ -226,7 +259,7 @@
 <p>以上就是MV*架构</p>
 <h2 id="2-自定义属性(Custom_Attributes)">2.自定义属性(Custom Attributes)</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 replay=<span class="string">"Hello replay"</span>&gt;<span class="constant">Hello,Custom&lt;</span>/h1&gt;</span><br><span class="line"></span><br><span class="line"><span class="regexp">//app</span>.js文件中：</span><br><span class="line">console.log(<span class="variable">$(</span><span class="string">'h1'</span>).attr(<span class="string">'replay'</span>));</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span>输出结果为<span class="constant">Hello </span>replay</span><br></pre></td></tr></table></figure>
 <p>虽然浏览器解释器不能正确解析，但是replay在内存中存在，DOM中存在</p>
-<p>Angular使用了自定义属性ng-<em>*</em></p>
+<p>Angular使用了自定义属性ng-<em>*</em><br><a id="more"></a></p>
 <h2 id="3-全局变量空间">3.全局变量空间</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line"><span class="keyword">var</span> person = <span class="string">'Tony'</span>;</span><br><span class="line">logPerson();</span><br><span class="line"></span><br><span class="line"><span class="comment">//utils.js</span></span><br><span class="line"><span class="keyword">var</span> peron = <span class="string">'Steve'</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">logPerson</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(person);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出结果为：</span></span><br><span class="line">Tony</span><br></pre></td></tr></table></figure>
 <p>这段代码带来了不可预期的结果，不是我们想要的。</p>
 <p>改进版为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//utils.js</span></span><br><span class="line"><span class="keyword">var</span> steveApp=&#123;&#125;;</span><br><span class="line">steveApp.person=<span class="string">'Steve'</span>;</span><br><span class="line"></span><br><span class="line">steveApp.logPerson=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(steveApp.person);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//app.js</span></span><br><span class="line"><span class="keyword">var</span> person=<span class="string">'Tony'</span>;</span><br><span class="line">steveApp.logPerson</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line">Steve</span><br></pre></td></tr></table></figure></p>
