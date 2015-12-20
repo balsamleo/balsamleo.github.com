@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>angular-learn-2 | 保的城</title>
+  <title>Angular学习2 | 保的城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1.多个控制器多个视图(Multiple Controllers,Multiple Views)1234567891011121314151617181920myApp.controller(&quot;mainController&quot;,[&apos;$scope&apos;,&apos;$filter&apos;,&apos;$http&apos;,function($scope,$log,$timeout,$filter,$http)&amp;#123;  $scope.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="angular-learn-2">
+<meta property="og:title" content="Angular学习2">
 <meta property="og:url" content="http:balsam.xyz/2015/12/20/angular-learn-2/index.html">
 <meta property="og:site_name" content="保的城">
 <meta property="og:description" content="1.多个控制器多个视图(Multiple Controllers,Multiple Views)1234567891011121314151617181920myApp.controller(&quot;mainController&quot;,[&apos;$scope&apos;,&apos;$filter&apos;,&apos;$http&apos;,function($scope,$log,$timeout,$filter,$http)&amp;#123;  $scope.">
-<meta property="og:updated_time" content="2015-12-20T04:24:45.943Z">
+<meta property="og:updated_time" content="2015-12-20T04:36:57.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="angular-learn-2">
+<meta name="twitter:title" content="Angular学习2">
 <meta name="twitter:description" content="1.多个控制器多个视图(Multiple Controllers,Multiple Views)1234567891011121314151617181920myApp.controller(&quot;mainController&quot;,[&apos;$scope&apos;,&apos;$filter&apos;,&apos;$http&apos;,function($scope,$log,$timeout,$filter,$http)&amp;#123;  $scope.">
   
     <link rel="alternative" href="/atom.xml" title="保的城" type="application/atom+xml">
@@ -193,7 +193,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      angular-learn-2
+      Angular学习2
     </h1>
   
 
@@ -213,8 +213,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-多个控制器多个视图(Multiple_Controllers,Multiple_Views)">1.多个控制器多个视图(Multiple Controllers,Multiple Views)</h4><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">myApp.controller(<span class="string">"mainController"</span>,[<span class="string">'$scope'</span>,<span class="string">'$filter'</span>,<span class="string">'$http'</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>,<span class="variable">$log</span>,<span class="variable">$timeout</span>,<span class="variable">$filter</span>,<span class="variable">$http</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name=<span class="string">'main'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line">myApp.controller(<span class="string">'secondController'</span>,[<span class="string">"$scope"</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name = <span class="string">'second'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"mainController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"secondController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="2-单页面应用和哈希(Single_Page_Apps_and_the_Hash)">2.单页面应用和哈希(Single Page Apps and the Hash)</h4>
+        <h2 id="1-多个控制器多个视图(Multiple_Controllers,Multiple_Views)">1.多个控制器多个视图(Multiple Controllers,Multiple Views)</h2><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">myApp.controller(<span class="string">"mainController"</span>,[<span class="string">'$scope'</span>,<span class="string">'$filter'</span>,<span class="string">'$http'</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>,<span class="variable">$log</span>,<span class="variable">$timeout</span>,<span class="variable">$filter</span>,<span class="variable">$http</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name=<span class="string">'main'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line">myApp.controller(<span class="string">'secondController'</span>,[<span class="string">"$scope"</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name = <span class="string">'second'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"mainController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"secondController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-单页面应用和哈希(Single_Page_Apps_and_the_Hash)">2.单页面应用和哈希(Single Page Apps and the Hash)</h2>
       
     </div>
     
@@ -260,7 +260,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="angular-learn-2" data-title="angular-learn-2" data-url="http:balsam.xyz/2015/12/20/angular-learn-2/"></div>
+	<div class="ds-thread" data-thread-key="angular-learn-2" data-title="Angular学习2" data-url="http:balsam.xyz/2015/12/20/angular-learn-2/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
