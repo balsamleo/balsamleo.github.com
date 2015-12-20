@@ -4,17 +4,48 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>保的城</title>
+  <title>Angular学习1 | 保的城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程|设计|幽默">
-<meta property="og:type" content="website">
-<meta property="og:title" content="保的城">
-<meta property="og:url" content="http:balsam.xyz/index.html">
+  <meta name="description" content="1.理念
+Modelvar fistname = ‘Tony’
+
+View
+Tony
+
+*
+
+
+以上就是MV*架构
+2.自定义属性(Custom Attributes)123456&amp;lt;h1 replay=&quot;Hello replay&quot;&amp;gt;Hello,Custom&amp;lt;/h1&amp;gt;//app.js文件中：console.log($(&apos;h1&apos;).attr(&apos;replay&apos;));//输出结果为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular学习1">
+<meta property="og:url" content="http:balsam.xyz/2015/12/19/angular-learn-1/index.html">
 <meta property="og:site_name" content="保的城">
-<meta property="og:description" content="编程|设计|幽默">
+<meta property="og:description" content="1.理念
+Modelvar fistname = ‘Tony’
+
+View
+Tony
+
+*
+
+
+以上就是MV*架构
+2.自定义属性(Custom Attributes)123456&amp;lt;h1 replay=&quot;Hello replay&quot;&amp;gt;Hello,Custom&amp;lt;/h1&amp;gt;//app.js文件中：console.log($(&apos;h1&apos;).attr(&apos;replay&apos;));//输出结果为">
+<meta property="og:updated_time" content="2015-12-20T04:31:21.789Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="保的城">
-<meta name="twitter:description" content="编程|设计|幽默">
+<meta name="twitter:title" content="Angular学习1">
+<meta name="twitter:description" content="1.理念
+Modelvar fistname = ‘Tony’
+
+View
+Tony
+
+*
+
+
+以上就是MV*架构
+2.自定义属性(Custom Attributes)123456&amp;lt;h1 replay=&quot;Hello replay&quot;&amp;gt;Hello,Custom&amp;lt;/h1&amp;gt;//app.js文件中：console.log($(&apos;h1&apos;).attr(&apos;replay&apos;));//输出结果为">
   
     <link rel="alternative" href="/atom.xml" title="保的城" type="application/atom+xml">
   
@@ -175,66 +206,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-angular-learn-2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/20/angular-learn-2/" class="article-date">
-  	<time datetime="2015-12-20T04:23:08.000Z" itemprop="datePublished">2015-12-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/20/angular-learn-2/">angular-learn-2</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-多个控制器多个视图(Multiple_Controllers,Multiple_Views)">1.多个控制器多个视图(Multiple Controllers,Multiple Views)</h4><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">myApp.controller(<span class="string">"mainController"</span>,[<span class="string">'$scope'</span>,<span class="string">'$filter'</span>,<span class="string">'$http'</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>,<span class="variable">$log</span>,<span class="variable">$timeout</span>,<span class="variable">$filter</span>,<span class="variable">$http</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name=<span class="string">'main'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line">myApp.controller(<span class="string">'secondController'</span>,[<span class="string">"$scope"</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name = <span class="string">'second'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"mainController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"secondController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="2-单页面应用和哈希(Single_Page_Apps_and_the_Hash)">2.单页面应用和哈希(Single Page Apps and the Hash)</h4>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-angular-learn-1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-angular-learn-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/12/19/angular-learn-1/" class="article-date">
@@ -250,12 +222,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/19/angular-learn-1/">Angular学习1</a>
+    <h1 class="article-title" itemprop="name">
+      Angular学习1
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -372,337 +355,77 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/20/angular-learn-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          angular-learn-2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/19/javascript-one/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Javascript学习1219</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
 
-
-
-
-  
-    <article id="post-javascript-one" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/19/javascript-one/" class="article-date">
-  	<time datetime="2015-12-19T07:40:03.000Z" itemprop="datePublished">2015-12-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/19/javascript-one/">Javascript学习1219</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>1.键值对/对象<br>键值对：键可能多次定义，但在特定context中只有唯一的一个值。值本身可能也是键值对。<br>对象：键值对的集合</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">Address</span>:<span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">Street</span>:<span class="value"><span class="string">'Main'</span>,</span><br><span class="line">	Number:<span class="number">100</span>,</span><br><span class="line">	Apartment:&#123;</span><br><span class="line">		Floor:<span class="number">3</span>,</span><br><span class="line">		Number:<span class="number">301</span></span><br><span class="line">	</span></span></span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Address是一个对象</p>
-<ul>
-<li>2.全局作用域，全局对象<br>js代码一旦执行，就产生了‘全局对象’和‘this’</li>
-</ul>
-<p>在浏览器中 this===window===frames</p>
-<ul>
-<li>3.执行上下文，变量提升</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">b();</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello World'</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Called b!'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出：</span></span><br><span class="line">Called b!</span><br><span class="line"><span class="literal">undefined</span></span><br></pre></td></tr></table></figure>
-<p>变量提升的原因:</p>
-<p>Creation Phase(创建阶段)：<br>    ‘this’,外部环境，为变量和函数申请内存</p>
-<p>在代码执行前，变量和函数在内存中已经存在了，代码的执行是一行一行的，a已经在内存中存在了，但是解释器不知道变量a的具体内容，所以显示’undefined’，如果是a不定义，则显示’Uncaught ReferenceError’(因为a在内存中不存在)</p>
-<p><strong>Javascript中，初始化值都是undefined</strong>,undefined是一种特殊值</p>
-<p>Execution Phase(执行阶段):<br>    链接-编译-解释-执行</p>
-<ul>
-<li><p>4.函数调用和Execution Stack(执行栈)<br>使用()来调用函数，将调用的函数放在执行栈的最上方，执行完毕弹出栈。</p>
-</li>
-<li><p>5.函数，上下文，变量环境,作用域(scope)</p>
-</li>
-</ul>
-<p>变量环境：变量存在的内存空间，在内存中的相互关系</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myVar = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(myVar);</span><br><span class="line">a();</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"><span class="number">1</span>,</span><br><span class="line"><span class="number">2</span>,</span><br><span class="line"><span class="literal">undefined</span></span><br></pre></td></tr></table></figure>
-<p>因为先输出全局的myVar=1,然后是a()中的myVar=2,然后是b()中的myvar(undefined).</p>
-<ul>
-<li>6.作用域链(The Scope Chain)</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar=<span class="number">2</span>;</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myVar = <span class="number">1</span>;</span><br><span class="line">a();</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出为：</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>从词法上来说，b()是在全局环境之上的，与a()同级。b()的外部环境是全局环境，所以它会去获取全局变量myVar的值，也就是1.</p>
-<ul>
-<li>7.作用域,ES6和let</li>
-</ul>
-<p>代码块<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">  <span class="keyword">let</span> <span class="built_in">c</span>=<span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>8.回调</li>
-</ul>
-<p>链接器/网络请求/引擎，之间的交互是异步的，只是引擎中的js是同步执行的。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// long running function</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">waitThreeSeconds</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> ms= <span class="number">3000</span>+ <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">  <span class="keyword">while</span>(<span class="keyword">new</span> <span class="built_in">Date</span>()&lt;ms)&#123;&#125;;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'finished function'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clickHandler</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'click event'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//listen for the click event</span></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>,clickHandler);</span><br><span class="line"></span><br><span class="line">waitThreeSeconds();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'finished Execution'</span>);</span><br><span class="line"><span class="comment">//输出结果:</span></span><br><span class="line">finished <span class="function"><span class="keyword">function</span></span><br><span class="line"><span class="title">finished</span> <span class="title">Execution</span> </span><br><span class="line"><span class="title">click</span> <span class="title">event</span></span></span><br></pre></td></tr></table></figure>
-<p>所有js代码执行之后，引擎会去监听事件队列，按顺序执行队列中的事件。（3秒内点击产生clickHandler，也是同样的执行顺序，3秒之后点击产生clickHandler则是马上执行，因为堆栈以及为空，可以处理事件队列）</p>
-<ul>
-<li>9.Javascript数据类型</li>
-</ul>
-<p>动态类型，引擎会在执行代码时自己判断</p>
-<p>6种基本数据类型（不是对象）</p>
-<blockquote>
-<p>1.undefined,变量未赋值<br>2.null, 变量值未null<br>3.boolean, true和false<br>4.Number，js只有浮点数数字类型<br>5.string，字符串 ‘’,””都可以用<br>6.symbol，ES6中可用</p>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/30天js/">30天js</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="angular-learn-1" data-title="Angular学习1" data-url="http:balsam.xyz/2015/12/19/angular-learn-1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"flase"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-
-
-
-
-  
-    <article id="post-how-to-setup-jekyll-blog" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/29/how-to-setup-jekyll-blog/" class="article-date">
-  	<time datetime="2015-11-29T04:16:28.000Z" itemprop="datePublished">2015-11-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/29/how-to-setup-jekyll-blog/">how-to-setup-jekyll-blog</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="缘起">缘起</h3><p>Hexo对md语法的支持太让我不满意了，继续折腾，弄jekyll去。作为一个能用Ubuntu作为日常工具的程序员，我相信还是可以搞定的，copy&amp;&amp;plate大法用得好，问题都不是问题。</p>
-<h3 id="问题">问题</h3><p>1.rails无法安装</p>
-<p>因为天朝网络原因，需要更好源。<br>1 sudo gem sources –remove <a href="https://rubygems.org/" target="_blank" rel="external">https://rubygems.org/</a><br>2 sudo gem sources -a <a href="http://ruby.taobao.org/" target="_blank" rel="external">http://ruby.taobao.org/</a></p>
-<p>2.ERROR: Failed to build gem native extension.</p>
-<p>依赖不足<br>sudo apt-get install imagemagick libmagickwand-dev</p>
-<p>3.有问题，看日志<br>之前没有养成这个习惯，问题出来了瞎着急，其实看看日志，对症下药，一切都会好起来的。<br>程序员就是个解决问题的群体<br>mkmf.rb can’t find header files for ruby at /usr/lib/ruby/include/ruby.h<br>解决办法<br>yum install ruby-devel</p>
-<p>4.安装yum</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ubuntu-skill" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/29/ubuntu-skill/" class="article-date">
-  	<time datetime="2015-11-29T02:25:17.000Z" itemprop="datePublished">2015-11-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/29/ubuntu-skill/">ubuntu-skill</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="要有个开头">要有个开头</h3><p>情景是最大的生产力，本文记录Ubuntu系统自己的，我想在Ubuntu上安装软件时遇到的各种问题。<br>程序员就是要不怕折腾，感谢Ubuntu一直给我折腾的机会，让我心平气和，好好学习。</p>
-<blockquote>
-<p>电脑情况<br>系统:Ubuntu 15.10<br>硬件:Asus</p>
-</blockquote>
-<p><strong>1.查找磁盘上大于20MB的文件</strong></p>
-<blockquote>
-<p>find / -size +20000k -exec ls -lh {} \;</p>
-</blockquote>
-<p><strong>2.增强gedit配置</strong></p>
-<blockquote>
-<p>下载<a href="https://github.com/ivyl/gedit-mate的压缩包" target="_blank" rel="external">https://github.com/ivyl/gedit-mate的压缩包</a><br>解压之后在当前目录开启terminal，运行 ./install.sh<br>之后就可以通过 g filename.filetype来更快捷地新建/打完文件了<br>Edit - Preferences - Fonts &amp; Colors 选择自己喜欢的字体和主题吧（有gmate字眼的是新增的）</p>
-</blockquote>
-<p><strong>3.权限</strong></p>
-<blockquote>
-<p>sudo su 进入超级管理员模式<br>exit  /logout  /ctrl + D /重新登录/关闭当前terminal 可以退出超级管理员模式</p>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/28/hello-world/" class="article-date">
-  	<time datetime="2015-11-28T02:25:17.000Z" itemprop="datePublished">2015-11-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/28/hello-world/">我归来了</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="过去">过去</h3><p>从2月份起，博客停止更新，更在8月份的时候做了一次清空，一次我自己都没有备份的清空。些许时候，就是这么希望可以和过去说不再见。过去的这几个月，我的人生经历了很多事情，种种原因我在此就不一一细说了。转身的时候心中还是有一些恐慌了，因为我们都是会对未知恐惧的生物，好在我一直比较自恋，这些日子也就这么顺顺当当地走下来了，待我心平气静时，这些经历也是可以慢慢诉说的。</p>
-<h3 id="现在">现在</h3><p>如今的我，窝居在深圳桃园一个5平米的小屋子里，选择这样的一个地方是不想把自己的时间花在上下班的路上，也是一种用金钱购买时间的方式。<br>如今的我，是一个在深圳南山区的Android程序员，虽然已经毕业两年多了，想想过去，自己好像也没成长多少，少年需努力啊。<br>如今的我，脾气很好，心境很好，自恋。</p>
-<h3 id="未来">未来</h3><p>如我此站标题所言，编程/设计/幽默，会是我之后投诸精力的领域，与自己对话，与机器对话。说一辈子太久，我只想每天都有进步，睡觉踏实，早日到达能把一件事情做好的境界。</p>
-<p><strong>编程</strong></p>
-<ul>
-<li>Android/Python/Nodejs</li>
-</ul>
-<p><strong>设计</strong></p>
-<ul>
-<li>视觉效果等等</li>
-</ul>
-<p><strong>幽默</strong></p>
-<ul>
-<li>我其实是个段子手</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -726,8 +449,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
