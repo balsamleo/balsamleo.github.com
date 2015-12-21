@@ -254,7 +254,7 @@ lastname,
 <p>(function(name){<br>    return ‘Hello ‘ + name;<br>}()); //表示这是个表达式<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
 <p>var firstname = ‘John’;</p>
 <p>(function(name){<br>    var greeting = ‘Hello’;<br>    console.log(greeting + name);<br>}(firstname));//IIFE经典实现，输出：Hello John<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">## <span class="number">10.</span>IIFE是安全代码</span></span><br></pre></td></tr></table></figure></p>
-<p>//IIFE<br>(function(name){<br>    var greeting = ‘Hello ‘;<br>    console.log(greeting + name);<br>}(‘John’));<br>```</p>
+<p>//IIFE<br>(function(global, name){<br>    var greeting = ‘Hello ‘;<br>    console.log(greeting + name);<br>}(window, ‘John’));<br>```</p>
 <p>()内的变量不会被全局变量污染，外部变量污染</p>
 
       

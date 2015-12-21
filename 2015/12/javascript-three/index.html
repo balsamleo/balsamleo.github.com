@@ -12,7 +12,7 @@
 <meta property="og:url" content="http:www.balsam.xyz/2015/12/javascript-three/index.html">
 <meta property="og:site_name" content="保的城">
 <meta property="og:description" content="1.按值引用和按址引用1234567891011121314151617181920212223242526272829303132//by value(基本数据类型)var a = 3;var b;b = a;a = 2;console.log(b);	//输出 3console.log(a); //输出 2//by reference(所有对象，包括函数)var c = &amp;#123; gree">
-<meta property="og:updated_time" content="2015-12-21T15:02:07.640Z">
+<meta property="og:updated_time" content="2015-12-21T15:03:06.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript学习1221">
 <meta name="twitter:description" content="1.按值引用和按址引用1234567891011121314151617181920212223242526272829303132//by value(基本数据类型)var a = 3;var b;b = a;a = 2;console.log(b);	//输出 3console.log(a); //输出 2//by reference(所有对象，包括函数)var c = &amp;#123; gree">
@@ -264,7 +264,7 @@ lastname,
 <p>(function(name){<br>    return ‘Hello ‘ + name;<br>}()); //表示这是个表达式<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
 <p>var firstname = ‘John’;</p>
 <p>(function(name){<br>    var greeting = ‘Hello’;<br>    console.log(greeting + name);<br>}(firstname));//IIFE经典实现，输出：Hello John<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">## <span class="number">10.</span>IIFE是安全代码</span></span><br></pre></td></tr></table></figure></p>
-<p>//IIFE<br>(function(name){<br>    var greeting = ‘Hello ‘;<br>    console.log(greeting + name);<br>}(‘John’));<br>```</p>
+<p>//IIFE<br>(function(global, name){<br>    var greeting = ‘Hello ‘;<br>    console.log(greeting + name);<br>}(window, ‘John’));<br>```</p>
 <p>()内的变量不会被全局变量污染，外部变量污染</p>
 
       
