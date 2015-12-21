@@ -194,7 +194,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/javascript-two/">Javascript学习2</a>
+      <a class="article-title" href="/2015/12/javascript-two/">Javascript学习1220</a>
     </h1>
   
 
@@ -208,7 +208,8 @@
 <p>var a = 1 + ‘2’ //结果是12(字符类型)</p>
 <h2 id="3-比较符">3.比较符</h2><p>console.log(3&lt;2&lt;1);//true</p>
 <p>过程是这样的：3&lt;2结果是false，false&lt;1结果是true，因为false也就是0.</p>
-
+<p>“3” == 3 //true<br>“3”===3  //false<br>null == 0 //false<br>false == 0 //true</p>
+<p>多使用===，严格相等符<br>
       
     </div>
     
@@ -221,6 +222,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/javascript-two/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -407,23 +412,7 @@
 <p>Creation Phase(创建阶段)：<br>    ‘this’,外部环境，为变量和函数申请内存</p>
 <p>在代码执行前，变量和函数在内存中已经存在了，代码的执行是一行一行的，a已经在内存中存在了，但是解释器不知道变量a的具体内容，所以显示’undefined’，如果是a不定义，则显示’Uncaught ReferenceError’(因为a在内存中不存在)</p>
 <p><strong>Javascript中，初始化值都是undefined</strong>,undefined是一种特殊值</p>
-<p>Execution Phase(执行阶段):<br>    链接-编译-解释-执行</p>
-<h2 id="4-函数调用和Execution_Stack(执行栈)">4.函数调用和Execution Stack(执行栈)</h2><p>使用()来调用函数，将调用的函数放在执行栈的最上方，执行完毕弹出栈。</p>
-<h2 id="5-函数，上下文，变量环境,作用域(scope)">5.函数，上下文，变量环境,作用域(scope)</h2><p>变量环境：变量存在的内存空间，在内存中的相互关系</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myVar = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(myVar);</span><br><span class="line">a();</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"><span class="number">1</span>,</span><br><span class="line"><span class="number">2</span>,</span><br><span class="line"><span class="literal">undefined</span></span><br></pre></td></tr></table></figure>
-<p>因为先输出全局的myVar=1,然后是a()中的myVar=2,然后是b()中的myvar(undefined).</p>
-<h2 id="6-作用域链(The_Scope_Chain)">6.作用域链(The Scope Chain)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar=<span class="number">2</span>;</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myVar = <span class="number">1</span>;</span><br><span class="line">a();</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出为：</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>从词法上来说，b()是在全局环境之上的，与a()同级。b()的外部环境是全局环境，所以它会去获取全局变量myVar的值，也就是1.</p>
-<h2 id="7-作用域,ES6和let">7.作用域,ES6和let</h2><p>代码块<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">  <span class="keyword">let</span> <span class="built_in">c</span>=<span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="8-回调">8.回调</h2><p>链接器/网络请求/引擎，之间的交互是异步的，只是引擎中的js是同步执行的。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// long running function</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">waitThreeSeconds</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> ms= <span class="number">3000</span>+ <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">  <span class="keyword">while</span>(<span class="keyword">new</span> <span class="built_in">Date</span>()&lt;ms)&#123;&#125;;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'finished function'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clickHandler</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'click event'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//listen for the click event</span></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>,clickHandler);</span><br><span class="line"></span><br><span class="line">waitThreeSeconds();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'finished Execution'</span>);</span><br><span class="line"><span class="comment">//输出结果:</span></span><br><span class="line">finished <span class="function"><span class="keyword">function</span></span><br><span class="line"><span class="title">finished</span> <span class="title">Execution</span> </span><br><span class="line"><span class="title">click</span> <span class="title">event</span></span></span><br></pre></td></tr></table></figure>
-<p>所有js代码执行之后，引擎会去监听事件队列，按顺序执行队列中的事件。（3秒内点击产生clickHandler，也是同样的执行顺序，3秒之后点击产生clickHandler则是马上执行，因为堆栈以及为空，可以处理事件队列）</p>
-<h2 id="9-Javascript数据类型">9.Javascript数据类型</h2><p>动态类型，引擎会在执行代码时自己判断</p>
-<p>6种基本数据类型（不是对象）</p>
-<blockquote>
-<p>1.undefined,变量未赋值<br>2.null, 变量值未null<br>3.boolean, true和false<br>4.Number，js只有浮点数数字类型<br>5.string，字符串 ‘’,””都可以用<br>6.symbol，ES6中可用</p>
-</blockquote>
-
+<p>Execution Phase(执行阶段):<br>    链接-编译-解释-执行<br>
       
     </div>
     
@@ -436,6 +425,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/javascript-one/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -481,12 +474,8 @@
       
         <h3 id="缘起">缘起</h3><p>Hexo对md语法的支持太让我不满意了，继续折腾，弄jekyll去。作为一个能用Ubuntu作为日常工具的程序员，我相信还是可以搞定的，copy&amp;&amp;plate大法用得好，问题都不是问题。</p>
 <h3 id="问题">问题</h3><p>1.rails无法安装</p>
-<p>因为天朝网络原因，需要更好源。<br>1 sudo gem sources –remove <a href="https://rubygems.org/" target="_blank" rel="external">https://rubygems.org/</a><br>2 sudo gem sources -a <a href="http://ruby.taobao.org/" target="_blank" rel="external">http://ruby.taobao.org/</a></p>
-<p>2.ERROR: Failed to build gem native extension.</p>
-<p>依赖不足<br>sudo apt-get install imagemagick libmagickwand-dev</p>
-<p>3.有问题，看日志<br>之前没有养成这个习惯，问题出来了瞎着急，其实看看日志，对症下药，一切都会好起来的。<br>程序员就是个解决问题的群体<br>mkmf.rb can’t find header files for ruby at /usr/lib/ruby/include/ruby.h<br>解决办法<br>yum install ruby-devel</p>
-<p>4.安装yum</p>
-
+<p>因为天朝网络原因，需要更好源。<br>1 sudo gem sources –remove <a href="https://rubygems.org/">https://rubygems.org/</a><br>2 sudo gem sources -a <a href="http://ruby.taobao.org/">http://ruby.taobao.org/</a></p>
+<p>2.ERROR: Failed to build gem native extension.<br>
       
     </div>
     
@@ -495,6 +484,10 @@
       
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/11/how-to-setup-jekyll-blog/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -548,13 +541,7 @@
 </blockquote>
 <p><strong>2.增强gedit配置</strong></p>
 <blockquote>
-<p>下载<a href="https://github.com/ivyl/gedit-mate的压缩包" target="_blank" rel="external">https://github.com/ivyl/gedit-mate的压缩包</a><br>解压之后在当前目录开启terminal，运行 ./install.sh<br>之后就可以通过 g filename.filetype来更快捷地新建/打完文件了<br>Edit - Preferences - Fonts &amp; Colors 选择自己喜欢的字体和主题吧（有gmate字眼的是新增的）</p>
-</blockquote>
-<p><strong>3.权限</strong></p>
-<blockquote>
-<p>sudo su 进入超级管理员模式<br>exit  /logout  /ctrl + D /重新登录/关闭当前terminal 可以退出超级管理员模式</p>
-</blockquote>
-
+<p>下载<a href="https://github.com/ivyl/gedit-mate的压缩包">https://github.com/ivyl/gedit-mate的压缩包</a><br>解压之后在当前目录开启terminal，运行 ./install.sh<br>之后就可以通过 g filename.filetype来更快捷地新建/打完文件了<br>Edit - Preferences - Fonts &amp; Colors 选择自己喜欢的字体和主题吧（有gmate字眼的是新增的）<br>
       
     </div>
     
@@ -567,6 +554,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/11/ubuntu-skill/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -610,22 +601,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="过去">过去</h3><p>从2月份起，博客停止更新，更在8月份的时候做了一次清空，一次我自己都没有备份的清空。些许时候，就是这么希望可以和过去说不再见。过去的这几个月，我的人生经历了很多事情，种种原因我在此就不一一细说了。转身的时候心中还是有一些恐慌了，因为我们都是会对未知恐惧的生物，好在我一直比较自恋，这些日子也就这么顺顺当当地走下来了，待我心平气静时，这些经历也是可以慢慢诉说的。</p>
-<h3 id="现在">现在</h3><p>如今的我，窝居在深圳桃园一个5平米的小屋子里，选择这样的一个地方是不想把自己的时间花在上下班的路上，也是一种用金钱购买时间的方式。<br>如今的我，是一个在深圳南山区的Android程序员，虽然已经毕业两年多了，想想过去，自己好像也没成长多少，少年需努力啊。<br>如今的我，脾气很好，心境很好，自恋。</p>
-<h3 id="未来">未来</h3><p>如我此站标题所言，编程/设计/幽默，会是我之后投诸精力的领域，与自己对话，与机器对话。说一辈子太久，我只想每天都有进步，睡觉踏实，早日到达能把一件事情做好的境界。</p>
-<p><strong>编程</strong></p>
-<ul>
-<li>Android/Python/Nodejs</li>
-</ul>
-<p><strong>设计</strong></p>
-<ul>
-<li>视觉效果等等</li>
-</ul>
-<p><strong>幽默</strong></p>
-<ul>
-<li>我其实是个段子手</li>
-</ul>
-
+        <h3 id="过去">过去</h3><p>从2月份起，博客停止更新，更在8月份的时候做了一次清空，一次我自己都没有备份的清空。些许时候，就是这么希望可以和过去说不再见。过去的这几个月，我的人生经历了很多事情，种种原因我在此就不一一细说了。转身的时候心中还是有一些恐慌了，因为我们都是会对未知恐惧的生物，好在我一直比较自恋，这些日子也就这么顺顺当当地走下来了，待我心平气静时，这些经历也是可以慢慢诉说的。<br>
       
     </div>
     
@@ -634,6 +610,10 @@
       
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/11/hello-world/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

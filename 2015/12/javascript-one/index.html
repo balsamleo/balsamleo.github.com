@@ -18,7 +18,7 @@ Address是一个对象
 12345678Address:&amp;#123;	Street:&apos;Main&apos;,	Number:100,	Apartment:&amp;#123;		Floor:3,		Number:301	&amp;#125;&amp;#125;
 Address是一个对象
 2.全局作用域，全局对象js代码一旦执行，就产">
-<meta property="og:updated_time" content="2015-12-20T12:27:46.591Z">
+<meta property="og:updated_time" content="2015-12-20T13:35:01.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript学习1219">
 <meta name="twitter:description" content="1.键值对/对象键值对：键可能多次定义，但在特定context中只有唯一的一个值。值本身可能也是键值对。对象：键值对的集合
@@ -232,7 +232,7 @@ Address是一个对象
 <p>Creation Phase(创建阶段)：<br>    ‘this’,外部环境，为变量和函数申请内存</p>
 <p>在代码执行前，变量和函数在内存中已经存在了，代码的执行是一行一行的，a已经在内存中存在了，但是解释器不知道变量a的具体内容，所以显示’undefined’，如果是a不定义，则显示’Uncaught ReferenceError’(因为a在内存中不存在)</p>
 <p><strong>Javascript中，初始化值都是undefined</strong>,undefined是一种特殊值</p>
-<p>Execution Phase(执行阶段):<br>    链接-编译-解释-执行</p>
+<p>Execution Phase(执行阶段):<br>    链接-编译-解释-执行<br><a id="more"></a></p>
 <h2 id="4-函数调用和Execution_Stack(执行栈)">4.函数调用和Execution Stack(执行栈)</h2><p>使用()来调用函数，将调用的函数放在执行栈的最上方，执行完毕弹出栈。</p>
 <h2 id="5-函数，上下文，变量环境,作用域(scope)">5.函数，上下文，变量环境,作用域(scope)</h2><p>变量环境：变量存在的内存空间，在内存中的相互关系</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myVar = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(myVar);</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myVar = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(myVar);</span><br><span class="line">a();</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"><span class="number">1</span>,</span><br><span class="line"><span class="number">2</span>,</span><br><span class="line"><span class="literal">undefined</span></span><br></pre></td></tr></table></figure>
