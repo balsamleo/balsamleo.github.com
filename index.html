@@ -177,6 +177,163 @@
 
       <div class="body-wrap">
   
+    <article id="post-angular-learn-3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/angular-learn-3/" class="article-date">
+  	<time datetime="2015-12-22T12:46:06.000Z" itemprop="datePublished">2015-12-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/angular-learn-3/">angular-learn-3</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/mgechev/angularjs-in-patterns/blob/master/i18n/README-zh-cn.md">原文档网址</a><br>我手敲一遍，以期理解。</p>
+<h2 id="目录">目录</h2><p>1.Angular概述：</p>
+<blockquote>
+<p>Partials,Controllers,Scope,Directives,Filters,Services</p>
+</blockquote>
+<p>2.Angular模式：</p>
+<ul>
+<li><p>Services</p>
+<blockquote>
+<p>单例模式，工厂方法模式，装饰者模式，外观模式，代理模式，Active Record模式，截取筛选器模式</p>
+</blockquote>
+</li>
+<li><p>Directives</p>
+<blockquote>
+<p>组合模式，解释器模式，模板视图模式</p>
+</blockquote>
+</li>
+<li><p>Scope</p>
+<blockquote>
+<p>观察者模式，责任链模式，命令模式</p>
+</blockquote>
+</li>
+<li><p>Controllers</p>
+<blockquote>
+<p>页面控制器模式</p>
+</blockquote>
+</li>
+<li><p>其他</p>
+<blockquote>
+<p>模块模式，数据映射模式，观察者作为外部服务。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="摘要">摘要</h2><p>学习新事物最好的方式之一是观察它如何运用整合已知的知识。本文介绍面向对象/设计模式和架构模式的基本概念，介绍AngularJS框架中的各种软件设计和架构模式以及如何在AngularJS单页面应用中使用它们。</p>
+<h2 id="AngularJS概览">AngularJS概览</h2><p>AngularJS提供了一个用于开发CRUD单页应用SPA的稳健基础。<br>单页应用是说一旦网页完成加载，用户进行任何操作都无需重现加载完整的网页。意味着所有应用资源（数据，模板，代码，样式）都应该预先完成加载，或者按需加载。大部分CRUD应用都包含共通的特质，AngularJS提供了一套经过优化的现成工具实现来满足此要求。包括：</p>
+<blockquote>
+<p>双向数据绑定<br>依赖注入<br>关注点分离<br>可测试性<br>抽象化<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/angular-learn-3/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-javascript-four" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/javascript-four/" class="article-date">
+  	<time datetime="2015-12-22T12:04:46.000Z" itemprop="datePublished">2015-12-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/javascript-four/">Javascript学习1222</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-闭包">1.闭包</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params">whattosay</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(whattosay + <span class="string">' '</span> + name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//greet('Hi')('Tony');</span></span><br><span class="line"><span class="keyword">var</span> sayHi = greet(<span class="string">'Hi'</span>);</span><br><span class="line">sayHi(<span class="string">'Tony'</span>);</span><br></pre></td></tr></table></figure>
+<p>为什么sayHi还能知道whattosay是Hi呢？这就是闭包<br>函数执行环境弹出栈了，但是变量还留在内存中，还能通过原型链找到，垃圾回收器不进行回收。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/30天js/">30天js</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/javascript-four/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-javascript-three" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -203,7 +360,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-按值引用和按址引用">1.按值引用和按址引用</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//by value(基本数据类型)</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">var</span> b;</span><br><span class="line"></span><br><span class="line">b = a;</span><br><span class="line">a = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(b);	<span class="comment">//输出 3</span></span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">//输出 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//by reference(所有对象，包括函数)</span></span><br><span class="line"><span class="keyword">var</span> c = &#123; greeting: <span class="string">'hi'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> d;</span><br><span class="line"></span><br><span class="line">d = c;</span><br><span class="line">c.greeting = <span class="string">'hello'</span>; <span class="comment">//mutate</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(d);		<span class="comment">//输出 'hello'</span></span><br><span class="line"><span class="built_in">console</span>.log(c);		<span class="comment">//输出 'hello'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//by reference(参数传递)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeGreeting</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	obj.greeting = <span class="string">'Hola'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">changeGreeting(d);</span><br><span class="line"><span class="built_in">console</span>.log(c);		<span class="comment">//输出 Hola</span></span><br><span class="line"><span class="built_in">console</span>.log(d);		<span class="comment">//输出 Hola</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 赋值操作符(equals operator)会新申请内存</span></span><br><span class="line">c = &#123; greeting: <span class="string">'howdy'</span> &#125;;</span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">//输出 howdy</span></span><br><span class="line"><span class="built_in">console</span>.log(d);	<span class="comment">//输出 Hola</span></span><br></pre></td></tr></table></figure>
+        <h2 id="1-按值引用和按址引用">1.按值引用和按址引用</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//by value(基本数据类型)</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">var</span> b;</span><br><span class="line"></span><br><span class="line">b = a;</span><br><span class="line">a = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(b);	<span class="comment">//输出 3</span></span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">//输出 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//by reference(所有对象，包括函数)</span></span><br><span class="line"><span class="keyword">var</span> c = &#123; greeting: <span class="string">'hi'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> d;</span><br><span class="line"></span><br><span class="line">d = c;</span><br><span class="line">c.greeting = <span class="string">'hello'</span>; <span class="comment">//mutate</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(d);		<span class="comment">//输出 'hello'</span></span><br><span class="line"><span class="built_in">console</span>.log(c);		<span class="comment">//输出 'hello'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//by reference(参数传递)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeGreeting</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	obj.greeting = <span class="string">'Hola'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">changeGreeting(d);</span><br><span class="line"><span class="built_in">console</span>.log(c);		<span class="comment">//输出 Hola</span></span><br><span class="line"><span class="built_in">console</span>.log(d);		<span class="comment">//输出 Hola</span></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"><span class="comment">// 赋值操作符(equals operator)会新申请内存</span></span><br><span class="line">c = &#123; greeting: <span class="string">'howdy'</span> &#125;;</span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">//输出 howdy</span></span><br><span class="line"><span class="built_in">console</span>.log(d);	<span class="comment">//输出 Hola</span></span><br></pre></td></tr></table></figure>
 <h2 id="2-this关键字">2.this关键字</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//this在全局环境中存在，浏览器中为window </span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a();<span class="comment">// 输出依旧是window</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line">b();<span class="comment">// 输出依旧是window</span></span><br></pre></td></tr></table></figure>
 <p>//都指向了同一块内存地址</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var c = &#123;</span><br><span class="line">	<span class="keyword">name</span>: <span class="string">'The c object'</span>,</span><br><span class="line">	<span class="built_in">log</span>: <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">		this.<span class="keyword">name</span> = <span class="string">'Update c object'</span>;</span><br><span class="line">		console.<span class="built_in">log</span>(this);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">c.<span class="built_in">log</span>(); 	//输出 &#123;<span class="keyword">name</span>: <span class="string">"The c object"</span>,<span class="built_in">log</span>: <span class="function"><span class="keyword">function</span></span>&#125;;</span><br><span class="line">(加上this.<span class="keyword">name</span> = <span class="string">'Update c object'</span>;后)	//输出 &#123;<span class="keyword">name</span>: <span class="string">"Update c object"</span>,<span class="built_in">log</span>: <span class="function"><span class="keyword">function</span></span>&#125;;</span><br></pre></td></tr></table></figure>

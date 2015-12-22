@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>angular-learn-3 | 保的城</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文档网址我手敲一遍，以期理解。
+目录1.Angular概述：
+
+Partials,Controllers,Scope,Directives,Filters,Services
+
+2.Angular模式：
+
+Services
+
+单例模式，工厂方法模式，装饰者模式，外观模式，代理模式，Active Record模式，截取筛选器模式
+
+
+Directives
+
+组合模式，解释器模式，模板视图模式
+
+
+S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="angular-learn-3">
+<meta property="og:url" content="http:www.balsam.xyz/2015/12/angular-learn-3/index.html">
+<meta property="og:site_name" content="保的城">
+<meta property="og:description" content="原文档网址我手敲一遍，以期理解。
+目录1.Angular概述：
+
+Partials,Controllers,Scope,Directives,Filters,Services
+
+2.Angular模式：
+
+Services
+
+单例模式，工厂方法模式，装饰者模式，外观模式，代理模式，Active Record模式，截取筛选器模式
+
+
+Directives
+
+组合模式，解释器模式，模板视图模式
+
+
+S">
+<meta property="og:updated_time" content="2015-12-22T12:49:14.794Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="angular-learn-3">
+<meta name="twitter:description" content="原文档网址我手敲一遍，以期理解。
+目录1.Angular概述：
+
+Partials,Controllers,Scope,Directives,Filters,Services
+
+2.Angular模式：
+
+Services
+
+单例模式，工厂方法模式，装饰者模式，外观模式，代理模式，Active Record模式，截取筛选器模式
+
+
+Directives
+
+组合模式，解释器模式，模板视图模式
+
+
+S">
+  
+    <link rel="alternative" href="/atom.xml" title="保的城" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Balsam</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Program | Design | Humor</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>標籤</li>
+						
+						
+						<li>關於</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/balsamleo" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/no20lbc" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/liao-bao-cheng" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="https://balsamleo@gmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/30天js/" style="font-size: 20px;">30天js</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我，Learn By Using it.</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Balsam</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="null" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Balsam</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Program | Design | Humor</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/balsamleo" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/no20lbc" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/liao-bao-cheng" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="https://balsamleo@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-angular-learn-3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/angular-learn-3/" class="article-date">
+  	<time datetime="2015-12-22T12:46:06.000Z" itemprop="datePublished">2015-12-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      angular-learn-3
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/mgechev/angularjs-in-patterns/blob/master/i18n/README-zh-cn.md" target="_blank" rel="external">原文档网址</a><br>我手敲一遍，以期理解。</p>
+<h2 id="目录">目录</h2><p>1.Angular概述：</p>
+<blockquote>
+<p>Partials,Controllers,Scope,Directives,Filters,Services</p>
+</blockquote>
+<p>2.Angular模式：</p>
+<ul>
+<li><p>Services</p>
+<blockquote>
+<p>单例模式，工厂方法模式，装饰者模式，外观模式，代理模式，Active Record模式，截取筛选器模式</p>
+</blockquote>
+</li>
+<li><p>Directives</p>
+<blockquote>
+<p>组合模式，解释器模式，模板视图模式</p>
+</blockquote>
+</li>
+<li><p>Scope</p>
+<blockquote>
+<p>观察者模式，责任链模式，命令模式</p>
+</blockquote>
+</li>
+<li><p>Controllers</p>
+<blockquote>
+<p>页面控制器模式</p>
+</blockquote>
+</li>
+<li><p>其他</p>
+<blockquote>
+<p>模块模式，数据映射模式，观察者作为外部服务。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="摘要">摘要</h2><p>学习新事物最好的方式之一是观察它如何运用整合已知的知识。本文介绍面向对象/设计模式和架构模式的基本概念，介绍AngularJS框架中的各种软件设计和架构模式以及如何在AngularJS单页面应用中使用它们。</p>
+<h2 id="AngularJS概览">AngularJS概览</h2><p>AngularJS提供了一个用于开发CRUD单页应用SPA的稳健基础。<br>单页应用是说一旦网页完成加载，用户进行任何操作都无需重现加载完整的网页。意味着所有应用资源（数据，模板，代码，样式）都应该预先完成加载，或者按需加载。大部分CRUD应用都包含共通的特质，AngularJS提供了一套经过优化的现成工具实现来满足此要求。包括：</p>
+<blockquote>
+<p>双向数据绑定<br>依赖注入<br>关注点分离<br>可测试性<br>抽象化<br><a id="more"></a><br>AngularJS将应用划分为互相隔离的构建来实现关注点分离：<br>partials片段<br>controllers控制器<br>directive指示器<br>services服务<br>filters过滤器</p>
+</blockquote>
+<p>这些构件可以在不同的模块中组合，帮助实现更高层级的抽象化以及处理复杂事件。每个单独构件都会封装应用程序中特定部分的逻辑。</p>
+<h3 id="Partials">Partials</h3><p>模板片段实际上就是HTML字符串，其元素和属性中可能包含了一些AngularJS表达式。与mustache.js和handlerbars框架相比，AngularJS的模板不需要转换为HTML】格式</p>
+<p>每个SPA都会在初始化是读取index.html文件。包括标准的和自定义的HTML属性，元素，注解。接下来用户通过操作改变应用的当前状态。</p>
+<p>示例：<br><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">ng-app</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- body tag augmented with ngController directive --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">body</span> <span class="attribute">ng-controller</span>=<span class="value">"MyController"</span>&gt;</span></span><br><span class="line">	  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">ng-model</span>=<span class="value">"foo"</span> <span class="attribute">value</span>=<span class="value">"bar"</span>&gt;</span></span><br><span class="line">	  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">ng-click</span>=<span class="value">"changeFoo()"</span>&gt;</span></span><span class="expression">&#123;&#123; <span class="variable">buttonText</span> &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">	  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>Partial文件通过AngularJS来处理用户交互，ng-click属性表示执行当前scope中的changeFoo()函数。</p>
+<h3 id="Controllers">Controllers</h3><p>AngularJS中的controller控制器本质上就是Javascript函数。通过将函数绑定到对应的scope上来处理用户与应用的交互（鼠标和键盘事件）。Controllers所需要的所有外部构件都是通过AngularJS的依赖注入机制实现的。<br>Controllers还会将数据也绑定到scope上，给partial提供数据model功能。<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> MyController(<span class="variable">$scope</span>)&#123;</span><br><span class="line">	<span class="variable">$scope</span>.buttonText = <span class="string">'Click me to change foo!'</span>;</span><br><span class="line">	<span class="variable">$scope</span>.foo = <span class="number">42</span>;</span><br><span class="line"></span><br><span class="line">	<span class="variable">$scope</span>.changeFoo =function() &#123;</span><br><span class="line">		<span class="variable">$scope</span>.foo += <span class="number">1</span>;</span><br><span class="line">		alert(<span class="string">'Foo changed to '</span> + <span class="variable">$scope</span>.foo);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>总结就是：<br>1.通过改变输入框中的文本来改变foo的值，由于是双向数据绑定，foo值会马上改变<br>2.点击按钮会改变foo的值。</p>
+<p>所有自定义的元素/属性/注释和类，只要被预先定义过，就可以被AngularJS的directive识别。</p>
+<h3 id="Scope">Scope</h3><p>在AngularJS中，scope是一个开放给partial的javascript对象。Scope包含不同的属性（基本数据类型，对象，函数）。所有归属于Scope 的函数都可以通过解析该scope所对应partial中的AngularJS表达式来执行，也可以由任意构件直接调用该函数（使用这种方式将保留指向该scope的引用不变）。附属于scope的数据可以通过使用合适的directive来绑定视图，如此一来，所有partial中的修改都会映射为某个scope属性的变化，反之也是如此。</p>
+<p>AngularJS中的scope还有一个重要的特质，它们都在原型链上（除了那些表明是独立的isolated scope)。任何子scope都属于调用父scope的函数，因为这些函数都是该scope直接或间接原型的属性。</p>
+<p>下面的例子展示了scope的继承关系。<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div ng-controller=<span class="string">"BaseCtrl"</span>&gt;</span><br><span class="line">  &lt;div id=<span class="string">"child"</span> ng-controller=<span class="string">"ChildCtrl"</span>&gt;</span><br><span class="line">    &lt;button id=<span class="string">"parent-method"</span> ng-click=<span class="string">"foo()"</span>&gt;Parent Method&lt;/button&gt;</span><br><span class="line">    &lt;button ng-click=<span class="string">"bar()"</span>&gt;Child Method&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> BaseCtrl(<span class="variable">$scope</span>)&#123;</span><br><span class="line">	<span class="variable">$scope</span>.foo = function()&#123;</span><br><span class="line">		alert(<span class="string">"Base foo"</span>);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> ChildCtrl(<span class="variable">$scope</span>)&#123;</span><br><span class="line">	<span class="variable">$scope</span>.bar = function()&#123;</span><br><span class="line">		alert(<span class="string">'Child bar'</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>由于ChildCtrl所注入的scope通过原型继承了父类scope（也即BaseCtrl），因此BaseCtrl可以访问到foo（属于ChildCtrl）函数。</p>
+<h3 id="Directives">Directives</h3><p>在AngularJS中，所有DOM操作都应该放置到directive中。每当你的controller里出现了DOM操作，就应该创建一个新的directive或者考虑现有的directive用来处理DOM操作需求。每个directive都有自己的名称和逻辑。最简化的directive仅仅包含名称和postLink函数定义，其中封装了所有directive所需的逻辑。较复杂的directive可以包含很多属性，例如：</p>
+<blockquote>
+<p>template模板<br>compile函数<br>link函数<br>等等</p>
+</blockquote>
+<p>通过引用directive的名称，这些属性可以被用于声明该directive的partial中。</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">myModule.directive(<span class="string">'alertButton'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		template: <span class="string">'&lt;button ng-transclude&gt;&lt;/button&gt;'</span>,</span><br><span class="line">		scope: &#123;</span><br><span class="line">			content: <span class="string">'@'</span></span><br><span class="line">		&#125;,</span><br><span class="line">		replace: <span class="literal">true</span>,</span><br><span class="line">		restrict: <span class="string">'E'</span>,</span><br><span class="line">		transclude: <span class="literal">true</span>,</span><br><span class="line">		link: <span class="function"><span class="keyword">function</span><span class="params">(scope,el)</span></span>&#123;</span><br><span class="line">			el.click(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">				alert(scope.content);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&lt;alert-button content=<span class="string">"42"</span>&gt;Click Me&lt;/alert-button&gt;</span><br></pre></td></tr></table></figure>
+<p>上面例子中，<alert-button></alert-button>标签会被按钮元素替换。当用户点击按钮时，弹出显示42的警告框。</p>
+<h3 id="Filters">Filters</h3><p>AngularJS中的filter(筛选器)负责封装数据格式化所需的逻辑。Filter通常被用在partial中，但也可以通过依赖注入方式在controllers/directive/service和其他filter中使用。</p>
+<p>以下定义了一个filter范例，用来将给定的字符串转变成大写。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">myModule.filter(<span class="string">'uppercase'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">(str)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (str||<span class="string">''</span>).toUpperCase();</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">此filter可以通过Unix管道语法在partial中使用。</span><br><span class="line">&lt;div&gt;&#123;&#123; name | uppercase &#125;&#125;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">在controllers中，filter通过如下方式使用：</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyCtrl</span><span class="params">(uppercaseFilter)</span></span>&#123;</span><br><span class="line">	<span class="variable">$scope</span>.name = uppercaseFilter(<span class="string">'foo'</span>);<span class="comment">//FOO</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Services">Services</h3><p>所有其他逻辑，如果不属于上述构件，都应该放置到service中。Service通常会封装领域专用逻辑(domain specific logic)，持久层逻辑(persistence logic)，XHR，WebSocket等。当应用程序中的controllers变得过于臃肿时就应该考虑将重复的代码放入到一个service中。</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">myModule.service(<span class="string">'Developer'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = <span class="string">'Foo'</span>;</span><br><span class="line">	<span class="keyword">this</span>.motherLanguage = <span class="string">'Javascript'</span>;</span><br><span class="line">	<span class="keyword">this</span>.live = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">			<span class="keyword">this</span>.code();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Service可以被注入到任何支持依赖注入机制的组件中，例如controllers，其他service，filter和directive中。<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyCtrl</span><span class="params">(Developer)</span></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> developer = <span class="keyword">new</span> Developer();</span><br><span class="line">	developer.live();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Angular模式">Angular模式</h2><p>接下来探讨一下传统的设计和架构模式如何在AngularJS的各个组件中组合实现的。</p>
+<h3 id="Services-1">Services</h3><h4 id="单例模式">单例模式</h4><blockquote>
+<p>整个系统只需要一个全局变量，协调系统整体的行为。系统在仅有单个对象或者有限个数的对象实例的环境中运行更加高效。</p>
+</blockquote>
+<p>AngularJS会按照如下算法解决构件所需要的依赖关系：</p>
+<ul>
+<li>提取所依赖组件的名称并查询哈希表(该表定义在一个闭包中，外部不可见)。</li>
+<li>如果依赖组件已经存在应用中，AngularJS会在需要的时候以参数的形式将其传递给对应的构件。</li>
+<li>如果依赖组件不存在：<ul>
+<li>AngularJS首先调用其提供者的生成函数，如<code>$get</code>。创建此依赖组件的实例时，可能会对算法内容进行递归调用，解决该组件本身的依赖关系。</li>
+<li>AngularJS然后将其缓存到哈希表中。</li>
+<li>AngularJS最后会在需要的时候将其传递给对应组件。</li>
+</ul>
+</li>
+</ul>
+<p>AngularJS源码中，getService函数的实现：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function getService(serviceName)&#123;</span><br><span class="line">	<span class="keyword">if</span>(cache.hasOwnProperty(serviceName))&#123;</span><br><span class="line">		<span class="keyword">if</span>(cache[servicename]===<span class="type">INSTANTIATING</span>)&#123;</span><br><span class="line">			<span class="keyword">throw</span> $injectorMinErr(<span class="symbol">'cde</span>p',<span class="symbol">'Circular</span> dependency found: &#123;<span class="number">0</span>&#125;, path.join('&lt;-'));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> cache[serviceName];</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			path.unshift(serviceName);</span><br><span class="line">			cache[serviceName] = <span class="type">INSTANTIATING</span>;</span><br><span class="line">			<span class="keyword">return</span> cache[serviceName] = factory(serviceName);</span><br><span class="line">		&#125;cache(err)&#123;</span><br><span class="line">			<span class="keyword">if</span>(cache[serviceName] == <span class="type">INSTANTIATING</span>)&#123;</span><br><span class="line">				delete cache[serviceName];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">throw</span> err;</span><br><span class="line">		&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">			path.shift();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>由于每个service只会被实例化一次，我们可以将service看成一个单例。缓存可以认为是单例管理器。我们不是将单例的静态私有引用保存在其构造函数中，而是将引用保存在单例管理器中，相比之下，这种方式的优点是：</p>
+<ul>
+<li>增加代码的可测试性</li>
+<li>控制单例对象的创建（本例子中，IoC容器通过懒惰式单例实例化方式帮我们进行控制）</li>
+</ul>
+<p>更深入的讨论，见<a href="http://googletesting.blogspot.jp/2008/05/tott-using-dependancy-injection-to.html" target="_blank" rel="external">文章</a>;</p>
+<h4 id="工厂方法模式">工厂方法模式</h4><blockquote>
+<p>工厂方法模式是一种创建型模式，实现了一个工厂方法概念来处理不指定对象具体类型的情况下创建对象。<br>解决办法是通过在抽象类中定义一个用来创建对象的工厂方法，然后在实体类中实现它。或者在一个基类中实现它，而该类可以通过继承关系被派生类所重写。</p>
+</blockquote>
+<p>具体代码如下：<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">myModule.config(<span class="keyword">function</span>(<span class="variable">$provide</span>)&#123;</span><br><span class="line">	<span class="variable">$provide</span>.provider(<span class="string">'foo'</span>, function()&#123;</span><br><span class="line">		var baz = <span class="number">42</span>;</span><br><span class="line">		return &#123;</span><br><span class="line">			//Factory method;</span><br><span class="line">			<span class="variable">$get</span>: function(bar)&#123;</span><br><span class="line">				var baz = baz.baz();</span><br><span class="line">				return &#123;</span><br><span class="line">					baz: baz</span><br><span class="line">				&#125;;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>在上面的代码中，我们使用config回调来定义一个新的provider。Provider是一个对象，包含了一个<code>$get</code>函数。由于Javascript没有接口(interface)，语言本身是鸭子类型，所以提供了一个给provider的工厂方法进行命名。</p>
+<p>每个service/filter/directive/controller都包含一个provider(即工厂方法名为$get的对象)，用于负责创建该组件的实例。<br>继续深入理解：<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//。。。</span><br><span class="line">createInternalInjector(instanceCache,<span class="keyword">function</span>(servicename)&#123;</span><br><span class="line">	var provider = providerInjector.get(servicename + providerSuffix);</span><br><span class="line">	return instanceInjector.invoke(provider.<span class="variable">$get</span>,provider,undefined,servicename);</span><br><span class="line">&#125;,strictDi);</span><br><span class="line">//...</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> invoke(fn, self, locals, servicename)&#123;</span><br><span class="line">	if(typeof locals === <span class="string">'string'</span>)&#123;</span><br><span class="line">		serviceName = locals;</span><br><span class="line">		locals = null;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	var args =[],</span><br><span class="line">			<span class="variable">$inject</span> = annotate(fn, strictDi, serviceName),</span><br><span class="line">			length, i,</span><br><span class="line">			key;</span><br><span class="line"></span><br><span class="line">	for(i=<span class="number">0</span> ,length=<span class="variable">$inject</span>.length;i&lt;length;i++)&#123;</span><br><span class="line">		key = <span class="variable">$inject</span>[i];</span><br><span class="line">		if(typeof key!== <span class="string">'string'</span>)&#123;</span><br><span class="line">			throw <span class="variable">$injectorMinErr</span>(<span class="string">'itkn'</span>,<span class="string">'Incorrect injection token! Expected service name as string, got&#123;0&#125;'</span>, key);</span><br><span class="line">		&#125;</span><br><span class="line">		args.push(</span><br><span class="line">			locals &amp;&amp; locals.hasOwnProperty(key)?locals[key]: getService(key)</span><br><span class="line">			);</span><br><span class="line">	&#125;</span><br><span class="line">	if(!fn.<span class="variable">$inject</span>)&#123;</span><br><span class="line">		//this means that we must be an array</span><br><span class="line">		fn = fn[length];</span><br><span class="line">	&#125;</span><br><span class="line">	return fn.apply(self, args);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>从上面的例子中，我们注意到$get函数被下面的代码使用</p>
+<blockquote>
+<p>instanceInjector.invoke(provider.$get,provider,undefined,servicename);</p>
+</blockquote>
+<p>上面这个代码片段调用了instanceInjector的invoke函数，其中第一个函数就是某service的工厂方法(也就是<code>$get</code>)。在invoke内部，annotate函数又将该工厂方法作为其第一个参数。如代码所示，annotate会使用AngularJS的依赖注入机制来解决所有的依赖关系。当所有依赖关系都满足后，工厂方法函数会被调用:fn.apply(self, args).</p>
+<p>由于工厂方法能间接创建对象，使用这种设计模式能带来很多好处。尤其在框架能够组件实例化的过程中关注解决一些样板化问题：</p>
+<ul>
+<li>选择最恰当的时机来完成组件所需的实例化过程</li>
+<li>解决组件所需的所有依赖关系</li>
+<li>设定组件所允许存在的实例个数（对于service和filter来说只有一个，而controller可以有多个实例）</li>
+</ul>
+<h4 id="装饰者模式">装饰者模式</h4><blockquote>
+<p>装饰者又称wrapper,与适配器模式的别名一样。可以动态或静态地往对象中添加新行为，而不影响同一个类生成的其他对象。</p>
+</blockquote>
+<p>AngularJS提供了这种方式来拓展/增强service的功能。通过$provide的decorator函数，可以在第三方现有的service上建立一个【包装】:<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">myModule.controller(<span class="string">'MainCtrl'</span>,<span class="keyword">function</span>(foo)&#123;</span><br><span class="line">	foo.bar();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">myModule.factory(<span class="string">'foo'</span>, <span class="keyword">function</span>()&#123;</span><br><span class="line">	return &#123;</span><br><span class="line">		bar: function()&#123;</span><br><span class="line">			console.log(<span class="string">'I\'</span>m bar<span class="string">');</span><br><span class="line">		&#125;,</span><br><span class="line">		bar: function()&#123;</span><br><span class="line">			console.log('</span>I\<span class="string">'m baz'</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">myModule.config(<span class="keyword">function</span>(<span class="variable">$provide</span>)&#123;</span><br><span class="line">	<span class="variable">$provide</span>.decorator(<span class="string">'foo'</span>, function(<span class="variable">$delegate</span>)&#123;</span><br><span class="line">		var barBackup = <span class="variable">$delegate</span>.bar;</span><br><span class="line">		<span class="variable">$delegate</span>.bar = function()&#123;</span><br><span class="line">			console.log(<span class="string">'Decorated'</span>);</span><br><span class="line">			barBackup.apply(<span class="variable">$delegate</span>,arguments);</span><br><span class="line">		&#125;;</span><br><span class="line">		return <span class="variable">$delegate</span>;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>上面例子定义了一个名为foo的新service。在config中，回调了<code>$provide</code>.decorator函数，第一个参数foo就是我们想要修饰的service名称，第二个参数则是实现修饰内容的函数。<code>$delegate</code>则保持引用原有foo service。通过使用AngularJS的依赖注入机制，这个本地依赖的引用是以构造函数的第一个参数传递。在这里，我们对service的修饰是重写其bar函数。实际修饰内容只是多执行一条console.log语句。然后继续在对应的上下文中调用原有bar函数。</p>
+<p>在需要修改第三方service的功能时，使用这种模式特别有用。如果需要使用多个类似功能的装饰(例如函数的性能测量，授权，日志记录等)，我们可能会生成大量重复的代码，违反DRY原则。这种情况需要使用面向侧面的程序设计AOP。目前我了解到AngularJS唯一AOP框架是github/mgechev/angular-aop.</p>
+<h4 id="外观模式">外观模式</h4><blockquote>
+<p>为大规模代码(例如类库)提供简化借口的对象。Facade可以：<br>1.针对常见任务提供各种易用函数，让软件库更加易用/理解和测试<br>2.让库更容易读<br>3.减少库内部工作对外部代码的依赖，允许系统开发时有更大的灵活度<br>4.将一些设计不行的API封装到设计良好的API中</p>
+</blockquote>
+<p>AngularJS中有很多facade。实际上，每次为现有功能提供更高层级的API时都在创建facade。</p>
+<p>我们看看如何创建一个XMLHttpRequest POST请求：<br><figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var <span class="keyword">http</span> = new XMLHttpRequest(),url=<span class="string">'/example/new'</span>,params=encodeURIComponent(data);</span><br><span class="line"></span><br><span class="line"><span class="keyword">http</span>.<span class="keyword">open</span>(<span class="string">"POST"</span>,url,true);</span><br><span class="line"></span><br><span class="line"><span class="keyword">http</span>.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</span><br><span class="line"><span class="keyword">http</span>.setRequestHeader(<span class="string">"Content-length"</span>,params.length);</span><br><span class="line"><span class="keyword">http</span>.setRequestHeader(<span class="string">"Connection"</span>,<span class="string">"close"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">http</span>.onreadystatechange = function()&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">http</span>.readyState==<span class="number">4</span>&amp;&amp;<span class="keyword">http</span>.status==<span class="number">200</span>)&#123;</span><br><span class="line">		alert(<span class="keyword">http</span>.responseText);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">http</span>.send(params);</span><br></pre></td></tr></table></figure></p>
+<p>我们也可用AnuglarJS的$http service来发送数据<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$http</span>(&#123;</span><br><span class="line">	method: <span class="string">'POST'</span>,</span><br><span class="line">	url: <span class="string">'/example/new'</span>,</span><br><span class="line">	data: data</span><br><span class="line">&#125;)</span><br><span class="line">.<span class="keyword">then</span>(<span class="keyword">function</span>(response)&#123;</span><br><span class="line">	alert(response);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">//更精简地</span><br><span class="line"><span class="variable">$http</span>.post(<span class="string">'/someurl'</span>,data)</span><br><span class="line">.<span class="keyword">then</span>(<span class="keyword">function</span>(response)&#123;</span><br><span class="line">	alert(response);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>第二种方式使用一个预先设定好的版本，用于向指定的URL创建并发送一个HTTP POST请求。</p>
+<p><code>$resource</code>则在<code>$http</code> service上建立了更高层级的抽象，我们会在后面ActiveRecord模式和代理模式中谈到。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/javascript-four/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Javascript学习1222</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="angular-learn-3" data-title="angular-learn-3" data-url="http:www.balsam.xyz/2015/12/angular-learn-3/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"flase"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Balsam
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
