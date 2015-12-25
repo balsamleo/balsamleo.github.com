@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Javascript学习1225 | 保的城</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="搞完这个，明天开始Underscore学习，进入函数式编程的世界，更重要的是给自己一个业务场景，Underscore对我而言就是一个业务场景，先搞懂Javascript语言本身，然后再去理解AngularJS，jQuery等就简单许多了。我曾经设想过自己要学习一门函数式语言，javascript就这么闯入了，那就好好玩吧。
+Javascript Enlightenment读书笔记1.Javascr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript学习1225">
+<meta property="og:url" content="http:www.balsam.xyz/2015/12/javascript-learn-7/index.html">
+<meta property="og:site_name" content="保的城">
+<meta property="og:description" content="搞完这个，明天开始Underscore学习，进入函数式编程的世界，更重要的是给自己一个业务场景，Underscore对我而言就是一个业务场景，先搞懂Javascript语言本身，然后再去理解AngularJS，jQuery等就简单许多了。我曾经设想过自己要学习一门函数式语言，javascript就这么闯入了，那就好好玩吧。
+Javascript Enlightenment读书笔记1.Javascr">
+<meta property="og:updated_time" content="2015-12-25T14:37:53.131Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javascript学习1225">
+<meta name="twitter:description" content="搞完这个，明天开始Underscore学习，进入函数式编程的世界，更重要的是给自己一个业务场景，Underscore对我而言就是一个业务场景，先搞懂Javascript语言本身，然后再去理解AngularJS，jQuery等就简单许多了。我曾经设想过自己要学习一门函数式语言，javascript就这么闯入了，那就好好玩吧。
+Javascript Enlightenment读书笔记1.Javascr">
+  
+    <link rel="alternative" href="/atom.xml" title="保的城" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Balsam</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Program | Design | Humor</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>標籤</li>
+						
+						
+						<li>關於</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/balsamleo" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/no20lbc" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/liao-bao-cheng" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="https://balsamleo@gmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/30天js/" style="font-size: 20px;">30天js</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我，Learn By Using it.</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Balsam</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="null" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Balsam</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Program | Design | Humor</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/balsamleo" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/no20lbc" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/liao-bao-cheng" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="https://balsamleo@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-javascript-learn-7" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/javascript-learn-7/" class="article-date">
+  	<time datetime="2015-12-25T13:58:54.000Z" itemprop="datePublished">2015-12-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Javascript学习1225
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/30天js/">30天js</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>搞完这个，明天开始Underscore学习，进入函数式编程的世界，更重要的是给自己一个业务场景，Underscore对我而言就是一个业务场景，先搞懂Javascript语言本身，然后再去理解AngularJS，jQuery等就简单许多了。<br>我曾经设想过自己要学习一门函数式语言，javascript就这么闯入了，那就好好玩吧。</p>
+<h1 id="Javascript_Enlightenment读书笔记">Javascript Enlightenment读书笔记</h1><h2 id="1-Javascript对象">1.Javascript对象</h2><p>9个原生的对象构造<br>Number(),<br>String(),<br>Boolean(),<br>Object(),<br>Array(),<br>Function(),<br>Date(),<br>RegExp(),<br>Error()</p>
+<p>Javascript基本上就是在这9个对象上再进行构造(还有字符串，数字，布尔值这些基本数据类型).理解这9个对象是我们高效使用Javascript这门语言威力的关键。<br><a id="more"></a><br><code>Math</code>对象很奇怪，是个静态对象，而不是构造对象。直接用就行了(var x=new Math();是错误的，var x = Math.PI;是正确的).</p>
+<p>原生对象都与<code>全局对象</code>关联在了一起，在浏览器中就是window</p>
+<p>Number()/String()/Boolean()不仅仅构造对象，还能提供基本数据类型。</p>
+<h2 id="2-对象和属性">2.对象和属性</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myObject = &#123;&#125;;</span><br><span class="line">myObject.myArray=[];</span><br><span class="line">myObject.myDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line">myFunction.myFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line">myFunction.myArray = [];</span><br><span class="line">myFunction.myDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br></pre></td></tr></table></figure>
+<p>Object()，Array(),Function()可以包含其他对象<br><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var <span class="keyword">object</span><span class="number">1</span> = &#123;</span><br><span class="line">	<span class="keyword">object</span><span class="number">1_1</span>：&#123;</span><br><span class="line"></span><br><span class="line">	&#125;，</span><br><span class="line">	<span class="keyword">object</span><span class="number">1_2</span>: &#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用.或者[]来获取/变更对象的属性。</p>
+<p>使用in来判断对象是是否有该属性<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myObject = &#123;foo: <span class="string">'value'</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'foo'</span> <span class="keyword">in</span> myObject); <span class="comment">//logs true</span></span><br></pre></td></tr></table></figure></p>
+<p>Host对象和原生对象</p>
+<p>使用underscore.js来拓展对象的功能，lodash也可以。</p>
+<p>下面这些函数可以在对象和数组中使用<br>each(),map(),reduce(),reduceRight(),detect(),select(),reject(),all(),any(),include(),invoke(),pluck(),max(),min(),sortBy(),sortIndex(),toArray(),size()</p>
+<p>下面这些函数可以在对象上使用<br>keys(),values(),functions(),extends(),clone(),tap(),isEqual(),isEmpty(),isElement(),isArray(),isArguments,isFunction(),isString(),isNumber,isBoolean,isDate,isRegExp,isNaN,isNull,isUndefined</p>
+<h2 id="3-对象">3.对象</h2><p>实例的属性 constructor<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var myobject = &#123;&#125;<span class="comment">;</span></span><br><span class="line">myobject.contructor()<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<p>实例的方法<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var myobject = &#123;&#125;<span class="comment">;</span></span><br><span class="line">myobject.toString()<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<p>hasOwnProperty();<br>isPrototypeOf();<br>propertyIsEnumerable();<br>toLocalString();<br>toString();<br>valueOf();</p>
+<p>所有的对象都是继承自Object.prototype</p>
+<h2 id="4-函数">4.函数</h2><p>函数是代码表达式的容器<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> addNumbers = <span class="keyword">new</span> <span class="function"><span class="keyword">Function</span><span class="params">(<span class="string">'num1'</span>,<span class="string">'num2'</span>,<span class="string">'return num1 + num2'</span>)</span></span>;</span><br><span class="line">console.log(addNumbers(<span class="number">2</span>,<span class="number">2</span>));<span class="comment">//log 4</span></span><br><span class="line"><span class="keyword">var</span> addNumberss = <span class="function"><span class="keyword">function</span><span class="params">(num1,num2)</span></span>&#123;<span class="keyword">return</span> num1 + num2&#125;; <span class="comment">//log 4</span></span><br></pre></td></tr></table></figure></p>
+<p>实例的属性<br>arguments,<br>contructor<br>length</p>
+<p>实例的方法<br>apply(),<br>call(),<br>toString(),<br>bind(),</p>
+<p>函数总是会返回数据，我们没有定义的时候它返回undefined<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> yelp = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">'i am yelp'</span>)&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(yelp()=== <span class="literal">undefined</span>);<span class="comment">//log true;</span></span><br></pre></td></tr></table></figure></p>
+<p>this和arguments在所有函数中可用(arguments.callee是一个很好用的对象)</p>
+<p>函数可以作为4种类型来调用<br>1.函数<br>2.方法<br>3.构造对象<br>4.apply()或call(),bind()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//function pattern</span></span><br><span class="line"><span class="keyword">var</span> myFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="string">'foo'</span>;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//method pattern</span></span><br><span class="line"><span class="keyword">var</span> myObject = &#123;myFunction: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="string">'bar'</span>;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//contructor pattern</span></span><br><span class="line"><span class="keyword">var</span> Cody = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.living = <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">this</span>.age = <span class="number">33</span>;</span><br><span class="line">	<span class="keyword">this</span>.gender = <span class="string">'male'</span>;</span><br><span class="line">	<span class="keyword">this</span>.getGender = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="keyword">this</span>.gender;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> cody = <span class="keyword">new</span> Cody();</span><br><span class="line"></span><br><span class="line"><span class="comment">//apply()和call pattern</span></span><br><span class="line"><span class="keyword">var</span> greet = &#123;</span><br><span class="line">	runGreet: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.name,<span class="built_in">arguments</span>[<span class="number">0</span>],<span class="built_in">arguments</span>[<span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cody = &#123;name: <span class="string">'cody'</span>&#125;;</span><br><span class="line">greet.runGreet.call(cody,<span class="string">'foo'</span>,<span class="string">'bar'</span>);<span class="comment">//log 'cody foo bar'</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-全局变量">5.全局变量</h2><p>Javascript的代码必须在一个对象中，浏览器中这个对象就是window。<br>Javascript有许多预定义的函数，比如</p>
+<blockquote>
+<p>decodeURI()<br>decodeURIComponent()<br>encodeURI()<br>encodeURIComponent()<br>eval()<br>isFinite()<br>isNaN()<br>parseFloat()<br>parseInt()</p>
+</blockquote>
+<h2 id="6-this关键词">6.this关键词</h2><p>```<br>var cody = {<br>    living: true,<br>    age: 23,<br>    gender: ‘male’,<br>    //getGender: function(){return cody.gender;}<br>    getGender: function { return this.gender;}  //this指向cody<br>}</p>
+<h2 id="7-作用域和闭包">7.作用域和闭包</h2><p>Javascript没有块作用域。<br>作用域是在函数定义时决定的，而不是函数调用时</p>
+<h2 id="8-函数原型属性">8.函数原型属性</h2><p>有四个理由，我们需要关心原型<br>1.原型属性用来实现原生的构造函数(Object(),Array(),Function())<br>2.自定义的构造函数可以添加到原型属性上，要这么做我们要先理解原型。<br>3.别人的实现可能是原型，你的得去修改维护<br>4.添加到原型链上的实现，随处可用</p>
+<h2 id="9-Array()">9.Array()</h2><p>Array的属性有</p>
+<blockquote>
+<p>constructor<br>index<br>input<br>length</p>
+</blockquote>
+<p>实例的方法<br>pop()<br>push()<br>reverse()<br>shift()<br>sort()<br>splice()<br>unshift()<br>unshift()<br>concat()<br>join()</p>
+<p>Array中的成员可以是Javascript类型</p>
+<h2 id="10-String">10.String</h2><p>实例的方法</p>
+<blockquote>
+<p>charAt()<br>charCodeAt()<br>concat()<br>indexOf()<br>lastIndexOf()<br>localCompare()<br>match()<br>quote()<br>replace()<br>search()<br>slice()<br>split()<br>substr()<br>substring()<br>toLocaleLowerCase()<br>toLocaleUpperCase()<br>toLowerCase()<br>toString()<br>toUpperCase()<br>valueOf()</p>
+</blockquote>
+<h2 id="11-Number">11.Number</h2><p>属性<br>MAX_VALUE<br>MIN_VALUE<br>NaN<br>NEGATIVE_INFINITY<br>POSITIVE_INFINITY<br>prototype</p>
+<p>方法</p>
+<p>toExponential()<br>toFiexed()<br>toLocaleString()<br>toPrecision()<br>toString()<br>valueOf()</p>
+<h2 id="12-Boolean">12.Boolean</h2><p>方法<br>toSource()<br>toString()<br>valueOf()</p>
+<h2 id="13-Null">13.Null</h2><p>console.log(typeof null) // log object</p>
+<h2 id="14-Undefined">14.Undefined</h2><h2 id="15-Math_Function">15.Math Function</h2><p>属性<br>E<br>LN2<br>LN10<br>LOG2E<br>LOG10E<br>PI<br>SQRT1_2<br>SQRT2</p>
+<p>方法<br>abs()<br>acos()<br>asin()<br>atan()<br>anat()<br>ceil()<br>cos()<br>exp()<br>floor()<br>log()<br>max()<br>min()<br>pow()<br>random()<br>round()<br>sin()<br>sort()<br>tan()</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/javascript-learn-6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Javascript学习1224</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="javascript-learn-7" data-title="Javascript学习1225" data-url="http:www.balsam.xyz/2015/12/javascript-learn-7/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"flase"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Balsam
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
