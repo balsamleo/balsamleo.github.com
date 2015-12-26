@@ -177,6 +177,95 @@
 
       <div class="body-wrap">
   
+    <article id="post-javascript-learn-8" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/javascript-learn-8/" class="article-date">
+  	<time datetime="2015-12-26T09:10:12.000Z" itemprop="datePublished">2015-12-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/javascript-learn-8/">Javascript学习1226</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一些underscore的链接">一些underscore的链接</h3><p><a href="http://singlebrook.com/blog/simplify-your-javascript-with-underscorejs" target="_blank" rel="external">使用underscore简化数据处理</a><br><a href="http://code.tutsplus.com/tutorials/getting-cozy-with-underscorejs--net-24581" target="_blank" rel="external">熟悉underscore</a><br><a href="http://blog.csdn.net/adeyi/article/details/17611467" target="_blank" rel="external">Underscore用法</a><br><a href="http://www.allitebooks.com/functional-javascript/" target="_blank" rel="external">Functional Javascript</a><br><a href="http://www.tuicool.com/articles/FRFFze" target="_blank" rel="external">函数式Javascript</a></p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Collections（集合） </span><br><span class="line"><span class="keyword">each</span>, map, reduce, reduceRight, find, <span class="built_in">filter</span>, reject, all, <span class="keyword">any</span>, <span class="built_in">include</span>, invoke,pluck, <span class="built_in">max</span>, <span class="built_in">min</span>, sortBy, groupBy, sortedIndex, shuffle, toArray, size</span><br><span class="line">Arrays（数组） </span><br><span class="line"><span class="keyword">first</span>, initial, <span class="keyword">last</span>, rest, compact, flatten, <span class="keyword">without</span>, <span class="built_in">union</span>, intersection,difference, uniq, zip, indexOf, lastIndexOf, range</span><br><span class="line">Functions（函数） </span><br><span class="line">bind, bindAll, memoize, delay, defer, throttle, debounce, once, <span class="keyword">after</span>, <span class="operator">wrap</span>,compose</span><br><span class="line">Objects（对象） </span><br><span class="line"><span class="built_in">keys</span>, values, functions, extend, defaults, clone, tap, isEqual, isEmpty,isElement, isArray, isArguments, isFunction, isString, <span class="built_in">isNumber</span>, isBoolean,isDate, isRegExp, isNaN, isNull, isUndefined</span><br><span class="line">Utility（功能） </span><br><span class="line">noConflict, identity, times, mixin, uniqueId, escape, template</span><br><span class="line">Chaining </span><br><span class="line">chain, <span class="built_in">value</span></span><br></pre></td></tr></table></figure>
+<h2 id="在控制台使用underscore">在控制台使用underscore</h2><p><strong><em>感觉越来越喜欢控制台了</em></strong></p>
+<p>_在nodejs中不能作为变量名，所以换一个名字就好了。<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> install -g underscore;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> un = <span class="built_in">require</span>(<span class="string">"nodejs"</span>);</span><br></pre></td></tr></table></figure></p>
+<h1 id="一个Youtube课程">一个Youtube课程</h1><p><a href="https://www.youtube.com/watch?v=bCqtb-Z5YGQ" target="_blank" rel="external">地址</a>;<br>filter,map,reject,reduce,<br>感觉我喜欢函数式编程了，有智商上的快感，恩，寓教于乐是学习的最高境界，所以继续high吧。</p>
+<h2 id="第一部分_filter">第一部分 filter</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">var animals = [</span><br><span class="line">	&#123;<span class="string">name:</span> <span class="string">'Fulff'</span>, <span class="string">species:</span> <span class="string">'rabbit'</span>&#125;,</span><br><span class="line">	&#123;<span class="string">name:</span> <span class="string">'Caro'</span>,<span class="string">species:</span> <span class="string">'dog'</span>&#125;,</span><br><span class="line">	&#123;<span class="string">name:</span> <span class="string">'Hamilton'</span>,<span class="string">species:</span> <span class="string">'dog'</span>&#125;,</span><br><span class="line">	&#123;<span class="string">name:</span> <span class="string">'Harold'</span>,species： <span class="string">'fish'</span>&#125;,</span><br><span class="line">	&#123;<span class="string">name:</span> <span class="string">'Ursula'</span>,<span class="string">species:</span> <span class="string">'cat'</span>&#125;,</span><br><span class="line">	&#123;<span class="string">name:</span> <span class="string">'Jimmy'</span>,<span class="string">species:</span> <span class="string">'fish'</span>&#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">//传统做法</span></span><br><span class="line"><span class="comment">/*</span><br><span class="line">var dogs = [];</span><br><span class="line">for(var i=0;i&lt;animals.length;i++)&#123;</span><br><span class="line">	if(animals[i].species === 'dog')&#123;</span><br><span class="line">		dogs.push(animals[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//函数式编程</span></span><br><span class="line">var dogs = animals.filter(function(animal)&#123;</span><br><span class="line">	<span class="keyword">return</span> animal.species === <span class="string">'dog'</span>;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>filter-&gt;true or false</p>
+<h2 id="第二部分_map_=&gt;">第二部分 map =&gt;</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> animals = [</span><br><span class="line">	&#123;name: <span class="string">'Fulff'</span>, species: <span class="string">'rabbit'</span>&#125;,</span><br><span class="line">	&#123;name: <span class="string">'Caro'</span>,species: <span class="string">'dog'</span>&#125;,</span><br><span class="line">	&#123;name: <span class="string">'Hamilton'</span>,species: <span class="string">'dog'</span>&#125;,</span><br><span class="line">	&#123;name: <span class="string">'Harold'</span>,species： <span class="string">'fish'</span>&#125;,</span><br><span class="line">	&#123;name: <span class="string">'Ursula'</span>,species: <span class="string">'cat'</span>&#125;,</span><br><span class="line">	&#123;name: <span class="string">'Jimmy'</span>,species: <span class="string">'fish'</span>&#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line">var names = [];</span><br><span class="line">for(var i=0;i&lt;animals.length;i++)&#123;</span><br><span class="line">	names.push(animals[i].name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(names);</span><br><span class="line">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> names = animals.map(<span class="function"><span class="keyword">function</span><span class="params">(animal)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> animal.name;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> namess = animals.map(<span class="function"><span class="keyword">function</span><span class="params">(animal)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> animal.name + animal.species; </span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> namesss = animals.map((animal) =&gt; animal.name);<span class="comment">//ES6 特性</span></span><br><span class="line">console.log(names);</span><br><span class="line"></span><br><span class="line">map -&gt; 想要的值</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## 第三部分 reduce</span></span><br></pre></td></tr></table></figure>
+<p>var orders = [<br>    { amount: 250},<br>    { amount: 400},<br>    { amount: 100},<br>    { amount: 325}<br>]</p>
+<p>/<em><br>var totalAmount = 0;<br>for(var i=0;i&lt;orders.length;i++){<br>    totalAmount += orders[i].amount;<br>}<br>console.log(totalAmount);
+</em>/</p>
+<p>var totalAmount = orders.reduce(function(sum,order){<br>    return sum + order.amount;<br>},0)</p>
+<h2 id="第四部分_高阶reduce">第四部分 高阶reduce</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将下面文件转成json对象</span><br></pre></td></tr></table></figure>
+<p>mark johansson     waffle iron     80     2<br>mark johansson     blender     200     1<br>mark johansson     knife     10     4<br>Nikita Smith     waffle iron     80     1<br>Nikita Smith     knife     10     2<br>Nikita Smith     pot     20     3</p>
+<p>//效果<br>{<br>    ‘mark johansson’: [<br>        {name: ‘waffle iron’,price: ‘80’,quantity: ‘2’},<br>        {name: ‘blender’, price: ‘200’,quanity: ‘1’},<br>        {name: ‘knife’, price: ‘10’,quanity: ‘4’},<br>    ],<br>    ‘Nikita Smith’: [<br>        {name: ‘waffle iron’,price: ‘80’,quanity: ‘1’},<br>        {name: ‘knife’,price: ‘10’,quanity: ‘2’},<br>        {name: ‘pot’, price: ‘20’, quanity: ‘3’}<br>    ]<br>}</p>
+<p>//代码<br>var fs = require(‘fs’);</p>
+<p>var output = fs.readFileSync(‘data.txt’,’utf-8’)<br>.trim()<br>.split(‘\n’)<br>.map(line=&gt;line.split(‘\t’))<br>.reduce((customers, line)=&gt;{<br>    customers[line[0]] = customers[line[0]]||[]<br>    customers[line[0]].push({<br>        name: line[1],<br>        price: line[2],<br>        quanity: line[3]<br>    })<br>    return customers;<br>},{});<br>console.log(‘output’,JSON.stringify(output,null,2));<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="vala"></span><br><span class="line"><span class="preprocessor">## 第五部分 闭包Closure</span></span><br><span class="line"></span><br><span class="line">Javascript中，函数不仅是函数，还是闭包</span></span><br></pre></td></tr></table></figure></p>
+<p>var me = ‘Brace’;<br>function greetMe(){<br>    console.log(‘Hello’ + me + ‘!’);<br>}<br>greetMe();</p>
+<p>//输出 Hello Brace!<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="vala"><span class="preprocessor">## 第六部分 柯里化Currying</span></span></span><br></pre></td></tr></table></figure></p>
+<p>let dragon =<br>    name =&gt;<br>        size =&gt;<br>            element =&gt;<br>                name + ‘ is a ‘+<br>                size + ‘ dragon that breathes ‘ +<br>                element + ‘!’<br>dragon(‘bb’)(‘tiny’)(‘lightening’);<br>//输出bb is a tiny dragon that breathes lightening!<br>参数在多处，最后凑在一起，搞定。</p>
+<p>let dragons = [<br>    {name: ‘fluffykins’,element:’lighting’},<br>    {name: ‘noomi’,element: ‘lighting’},<br>    {name: ‘karo’,element: ‘fire’},<br>    {name: ‘doomer’,element: ‘timewarp’}<br>]<br>let hasElement = (element,obj)=&gt;obj.element===element;<br>let lightingDragons = dragons.filter(x=&gt;hasElement(‘lighting’,x));</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">## 第<span class="number">7</span>部分 迭代</span></span><br><span class="line"></span><br><span class="line">自己调用自己，直到调不了。</span><br></pre></td></tr></table></figure>
+<p>‘use strict’;<br>let countDownFrom = (num) =&gt; {<br>    if(num===0)return;<br>    console.log(num);<br>    countDownFrom(num - 1);<br>}<br>countDownFrom(10);<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>‘use strict’;<br>let categories = [<br>    {id:’animals’,’parent’:null},<br>    {id:’mammals’,’parent’:’animals’},<br>    {id:’cats’,’parent’:’mammals’},<br>    {id:’dogs’,’parent’:’mammals’},<br>    {id:’chihuahua’,’parent’:’dogs’},<br>    {id:’labrador’,’parent’:’dogs’},<br>    {id:’persian’,’parent’:’cats’},<br>    {id:’siames’,’parent’:’cats’}<br>]</p>
+<p>let makeTree = (categories,parent)=&gt;{<br>    let node = {};<br>    categories<br>        .filter(c=&gt;c.parent===parent)<br>        .forEach(c=&gt;node[c.id]=makeTree(categories,c.id));<br>    return node;<br>}</p>
+<p>console.log(JSON.stringify(makeTree(categories,null),null,2));<br>//输出结果<br>{<br>  “animals”: {<br>    “mammals”: {<br>      “cats”: {<br>        “persian”: {},<br>        “siames”: {}<br>      },<br>      “dogs”: {<br>        “chihuahua”: {},<br>        “labrador”: {}<br>      }<br>    }<br>  }<br>}<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="markdown"></span><br><span class="line"><span class="header"># Undercore源码欣赏</span></span><br><span class="line"></span><br><span class="line">[<span class="link_label">中文文档</span>](<span class="link_url">http://www.css88.com/doc/underscore/</span>);</span><br><span class="line"></span><br><span class="line">100多个函数分为了几大模板，一个是集合[<span class="link_label">数组或对象</span>](<span class="link_url">Collections</span>),一个是数组(Arrays),一个是函数(Functions),一个是对象(Objects),还有工具类(Utility),链式语法(Chaining).</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">集合函数(数组或对象)</span></span><br></pre></td></tr></table></figure></p>
+<p><em>.each(list,literatee,[context])
+</em>.each([1,2,3],alert);//三次弹窗</p>
+<p><em>.map(list,literatee,[context])
+</em>.map([1,2,3],function(num{return num * 3;}));//[1,6,9]</p>
+<p><em>.reduce(list,iteratee,[memo],[context])<br>var sum = </em>.reduce([1,2,3],function(memo,num){ return memo + num;},0);//6,memo是起始值，如果memo是10的话结果是16</p>
+<p><em>reduceRight(list,iteratee,memo,[context]);<br>var list = [[0,1],[2,3],[4,5]];<br>var flat = </em>.reduceRight(list,function(a,b){return a.concat(b);},[]);<br>//输出 [4,5,2,3,0,1];</p>
+<p><em>.find(list,predicate,[context]);<br>var even = </em>.find([1,2,3,4,5,6],function(num){return num % 2==0;});<br>//输出 2(第一个符合条件的成员)<br>```</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/30天js/">30天js</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-javascript-learn-7" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -759,79 +848,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/12/angular-learn-2/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-angular-learn-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/angular-learn-1/" class="article-date">
-  	<time datetime="2015-12-19T10:59:28.000Z" itemprop="datePublished">2015-12-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/angular-learn-1/">Angular学习1</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Angular学习第一篇，好好学习。<br>内容包括1.模块和控制器 2.依赖注入 3.scope 4.函数和字符串 5.数组和函数 6.作用域和插值 7.指令和双向绑定 8.事件循环 9.观察者和消费循环  10.通用指令 11.XHR</p>
-<h2 id="1-理念">1.理念</h2><ul>
-<li><p>Model<br>var fistname = ‘Tony’</p>
-</li>
-<li><p>View</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>Tony<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>*</p>
-</li>
-</ul>
-<p>以上就是MV*架构</p>
-<h2 id="2-自定义属性(Custom_Attributes)">2.自定义属性(Custom Attributes)</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 replay=<span class="string">"Hello replay"</span>&gt;<span class="constant">Hello,Custom&lt;</span>/h1&gt;</span><br><span class="line"></span><br><span class="line"><span class="regexp">//app</span>.js文件中：</span><br><span class="line">console.log(<span class="variable">$(</span><span class="string">'h1'</span>).attr(<span class="string">'replay'</span>));</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span>输出结果为<span class="constant">Hello </span>replay</span><br></pre></td></tr></table></figure>
-<p>虽然浏览器解释器不能正确解析，但是replay在内存中存在，DOM中存在</p>
-<p>Angular使用了自定义属性ng-<em>*</em><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/12/angular-learn-1/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

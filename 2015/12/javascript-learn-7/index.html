@@ -14,7 +14,7 @@ Javascript Enlightenment读书笔记1.Javascr">
 <meta property="og:site_name" content="保的城">
 <meta property="og:description" content="搞完这个，明天开始Underscore学习，进入函数式编程的世界，更重要的是给自己一个业务场景，Underscore对我而言就是一个业务场景，先搞懂Javascript语言本身，然后再去理解AngularJS，jQuery等就简单许多了。我曾经设想过自己要学习一门函数式语言，javascript就这么闯入了，那就好好玩吧。
 Javascript Enlightenment读书笔记1.Javascr">
-<meta property="og:updated_time" content="2015-12-25T14:37:53.131Z">
+<meta property="og:updated_time" content="2015-12-25T14:39:51.640Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript学习1225">
 <meta name="twitter:description" content="搞完这个，明天开始Underscore学习，进入函数式编程的世界，更重要的是给自己一个业务场景，Underscore对我而言就是一个业务场景，先搞懂Javascript语言本身，然后再去理解AngularJS，jQuery等就简单许多了。我曾经设想过自己要学习一门函数式语言，javascript就这么闯入了，那就好好玩吧。
@@ -244,7 +244,7 @@ Javascript Enlightenment读书笔记1.Javascr">
 <blockquote>
 <p>decodeURI()<br>decodeURIComponent()<br>encodeURI()<br>encodeURIComponent()<br>eval()<br>isFinite()<br>isNaN()<br>parseFloat()<br>parseInt()</p>
 </blockquote>
-<h2 id="6-this关键词">6.this关键词</h2><p>```<br>var cody = {<br>    living: true,<br>    age: 23,<br>    gender: ‘male’,<br>    //getGender: function(){return cody.gender;}<br>    getGender: function { return this.gender;}  //this指向cody<br>}</p>
+<h2 id="6-this关键词">6.this关键词</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cody = &#123;</span><br><span class="line">	living: <span class="literal">true</span>,</span><br><span class="line">	age: <span class="number">23</span>,</span><br><span class="line">	gender: <span class="string">'male'</span>,</span><br><span class="line">	<span class="comment">//getGender: function()&#123;return cody.gender;&#125;</span></span><br><span class="line">	getGender: <span class="function"><span class="keyword">function</span> </span>&#123; <span class="keyword">return</span> <span class="keyword">this</span>.gender;&#125;  <span class="comment">//this指向cody</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="7-作用域和闭包">7.作用域和闭包</h2><p>Javascript没有块作用域。<br>作用域是在函数定义时决定的，而不是函数调用时</p>
 <h2 id="8-函数原型属性">8.函数原型属性</h2><p>有四个理由，我们需要关心原型<br>1.原型属性用来实现原生的构造函数(Object(),Array(),Function())<br>2.自定义的构造函数可以添加到原型属性上，要这么做我们要先理解原型。<br>3.别人的实现可能是原型，你的得去修改维护<br>4.添加到原型链上的实现，随处可用</p>
 <h2 id="9-Array()">9.Array()</h2><p>Array的属性有</p>
@@ -272,6 +272,15 @@ Javascript Enlightenment读书笔记1.Javascr">
   
     
 <nav id="article-nav">
+  
+    <a href="/2015/12/javascript-learn-8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Javascript学习1226
+        
+      </div>
+    </a>
   
   
     <a href="/2015/12/javascript-learn-6/" id="article-nav-older" class="article-nav-link-wrap">
