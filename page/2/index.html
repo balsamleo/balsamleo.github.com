@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/30天js/" style="font-size: 20px;">30天js</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
+						<a href="/tags/30天js/" style="font-size: 20px;">30天js</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
 					</div>
 				</section>
 				
@@ -176,6 +176,132 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-javascript-learn-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/javascript-learn-2/" class="article-date">
+  	<time datetime="2015-12-20T12:20:07.000Z" itemprop="datePublished">2015-12-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/javascript-learn-2/">Javascript学习1220</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-操作符，优先级，结合性">1.操作符，优先级，结合性</h2><p>操作符其实也是函数，接收两个参数，返回一个结果。<br>操作符有优先级，优先级越高的越早调用。<br>结合性：从右到左，还是从左到右</p>
+<h2 id="2-类型强转(coercion)">2.类型强转(coercion)</h2><p>因为js是动态类型的，所以这种操作很频繁。</p>
+<p>var a = 1 + ‘2’ //结果是12(字符类型)</p>
+<h2 id="3-比较符">3.比较符</h2><p>console.log(3&lt;2&lt;1);//true</p>
+<p>过程是这样的：3&lt;2结果是false，false&lt;1结果是true，因为false也就是0.</p>
+<p>“3” == 3 //true<br>“3”===3  //false<br>null == 0 //false<br>false == 0 //true</p>
+<p>多使用===，严格相等符<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/30天js/">30天js</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/javascript-learn-2/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-angular-learn-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/angular-learn-2/" class="article-date">
+  	<time datetime="2015-12-20T04:23:08.000Z" itemprop="datePublished">2015-12-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/angular-learn-2/">Angular学习2</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-多个控制器多个视图(Multiple_Controllers,Multiple_Views)">1.多个控制器多个视图(Multiple Controllers,Multiple Views)</h2><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">myApp.controller(<span class="string">"mainController"</span>,[<span class="string">'$scope'</span>,<span class="string">'$filter'</span>,<span class="string">'$http'</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>,<span class="variable">$log</span>,<span class="variable">$timeout</span>,<span class="variable">$filter</span>,<span class="variable">$http</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name=<span class="string">'main'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line">myApp.controller(<span class="string">'secondController'</span>,[<span class="string">"$scope"</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name = <span class="string">'second'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"mainController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"secondController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/angular-learn-2/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-angular-learn-1" class="article article-type-post" itemscope itemprop="blogPost">
   
