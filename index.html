@@ -177,6 +177,125 @@
 
       <div class="body-wrap">
   
+    <article id="post-javascript-learn-13" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/javascript-learn-13/" class="article-date">
+  	<time datetime="2016-01-08T14:43:12.000Z" itemprop="datePublished">2016-01-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/javascript-learn-13/">Javascript学习13</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="开篇">开篇</h2><p>2016年的第一篇博客啊。不知不觉2016年又过去了八天，还好我一直没有停止学习的脚步，基本上现在能确定我2个月内的修炼路径了，感谢这段时间没有停止学习的自己。</p>
+<h2 id="该学些什么">该学些什么</h2><p>时常感到过去的自己不成熟，那也是从一个侧面证明自己在不断进步才会有这种对比。过去的10多天里，默默地将Javascript Weekly刷完了，收获是很大的，基本是我从一个JS小白成功地窥见了Javascript这个生态圈的盛况。</p>
+<p>完整走下来最大的感悟就是，英语真的要继续修炼，为了更好地接触最前沿的咨询知识。<br>在这个阅读过程中，也积攒了很多接下来都会用到的链接，为我自己量身打造的一套收藏书签。好好把工作完成便是好好生活。</p>
+<h2 id="怎么学">怎么学</h2><p>系统性的修炼交给书籍，查漏补缺型的修炼交给视频，消磨时间型的修炼交给播客，定点突击的修炼交给博客。<br>而这些东西，在阅读Javascript Weekly的过程中我做了足够多的去粗取精，技术储备。我可以好好玩耍了。在电脑上主要是靠微盘下载书籍放到多看上阅读，靠bt下载视频，靠chrome播放音频，靠feedly阅读博客，这些东西都有一个核心：用英语来学习Javascript。所以我得感谢大学虽则一事无成然则过了六级的自己，不管怎样，我能把这些东西啃下来，慢慢地褪去弱者心态，迎来强者心态，我也就新生了。</p>
+<h2 id="接下来">接下来</h2><p>仪式感是个很重要的东西，让生活变得有规律是让自己保持精力充沛状态重要的步骤，让自己的生活有规律起来把。在如今这个变化的时代，善用工具者得天下。我想想啊，我用<code>电脑</code>这个工具，在<code>chrome</code>这个工具上使用<code>vpn</code>工具，使用<code>英语</code>这个工具去学习<code>Javascript</code>这个工具，想着掌握了JS后能做出来<code>系统</code>这个工具让用户去使用。善工具者，我正在路上。</p>
+<h2 id="尾声">尾声</h2><p>我就是我，师从世界级开发者，锻我工具，拓我前程，少些自我感动，多些自我驱动，早日到达把一件事情做好的境界。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/30天js/">30天js</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-javascript-learn-12" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/javascript-learn-12/" class="article-date">
+  	<time datetime="2016-01-05T14:18:21.890Z" itemprop="datePublished">2016-01-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>BLANK    [ \t\n]+<br>%%<br>//Whitespace<br>{BLANK}  /<em>ignore</em>/<br>//Literals<br>[0-9]+    yylval = atoi (yytext); return T_NUMBER;<br>//Keywords<br>“end”  yylval = yytext; return T_END;<br>//…</p>
+<p>%%{<br>machine lexer;</p>
+<p>#Machine<br>number        = [0-=]+;<br>whitespace    = “ “;<br>keyword        = “end” | “def” | “class” | “if” | “else” | “true” | “false” | “nil”;</p>
+<p>#Actions<br>main := |<em><br>    whitespace; #ignore<br>    number        =&gt;{ tokens &lt;&lt; [:NUMBER,data[ts..te].to_i] };<br>    keyword        =&gt;{ tokens &lt;&lt; [data[ts…te].upcase.to_sym, data[ts…te]] };
+</em>|;</p>
+<p>class Lexer<br>    def initialize<br>        %% write data;<br>    end</p>
+<pre><code>def run(<span class="type">data</span>)
+    eof = <span class="type">data</span>.<span class="built_in">size</span>
+    line = <span class="number">1</span>
+    tokens = []
+    %% <span class="built_in">write</span> init;
+    %% <span class="built_in">write</span> exec;
+    tokens
+<span class="keyword">end</span>
+</code></pre><p>end<br>}%%</p>
+<p>if tasty == True:<br>    print “Delicious!”</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-javascript-learn-11" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -700,176 +819,9 @@
 
 
   
-    <article id="post-angular-learn-4" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/angular-learn-4/" class="article-date">
-  	<time datetime="2015-12-23T06:47:02.000Z" itemprop="datePublished">2015-12-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/angular-learn-4/">Angular学习4</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="代理模式(proxy)">代理模式(proxy)</h3><p>继续<a href="http://www.balsam.xyz/2015/12/angular-learn-3/">上一篇</a>的学习</p>
-<blockquote>
-<p>代理：指一个类可以作为其他东西的接口。代理者可以作任何东西的接口：网络连接，存储器中的大对象，文件或者其他昂贵或无法复制的资源。</p>
-</blockquote>
-<p>代理可以分为三种类型：</p>
-<ul>
-<li>虚拟代理（Virtual Proxy）</li>
-<li>远端代理（Remote Proxy）</li>
-<li>保护代理（Protection Proxy）</li>
-</ul>
-<p>我们讨论虚拟代理在AngularJS中的实现</p>
-<p>下面的代码调用<code>$get</code>函数，属于一个名为User的<code>$resource</code>的实例<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var User = <span class="variable">$resource</span>(<span class="string">'/users/:id'</span>),</span><br><span class="line">	user = User.get(&#123; id: <span class="number">42</span> &#125;);</span><br><span class="line">console.log(user);//&#123;&#125;</span><br></pre></td></tr></table></figure></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/12/angular-learn-4/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-angular-learn-3" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/angular-learn-3/" class="article-date">
-  	<time datetime="2015-12-22T12:46:06.000Z" itemprop="datePublished">2015-12-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/angular-learn-3/">AngularJS学习3</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://github.com/mgechev/angularjs-in-patterns/blob/master/i18n/README-zh-cn.md">原文档网址</a><br>我手敲一遍，以期理解。</p>
-<h2 id="目录">目录</h2><p>1.Angular概述：</p>
-<blockquote>
-<p>Partials,Controllers,Scope,Directives,Filters,Services</p>
-</blockquote>
-<p>2.Angular模式：</p>
-<ul>
-<li><p>Services</p>
-<blockquote>
-<p>单例模式，工厂方法模式，装饰者模式，外观模式，代理模式，Active Record模式，截取筛选器模式</p>
-</blockquote>
-</li>
-<li><p>Directives</p>
-<blockquote>
-<p>组合模式，解释器模式，模板视图模式</p>
-</blockquote>
-</li>
-<li><p>Scope</p>
-<blockquote>
-<p>观察者模式，责任链模式，命令模式</p>
-</blockquote>
-</li>
-<li><p>Controllers</p>
-<blockquote>
-<p>页面控制器模式</p>
-</blockquote>
-</li>
-<li><p>其他</p>
-<blockquote>
-<p>模块模式，数据映射模式，观察者作为外部服务。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="摘要">摘要</h2><p>学习新事物最好的方式之一是观察它如何运用整合已知的知识。本文介绍面向对象/设计模式和架构模式的基本概念，介绍AngularJS框架中的各种软件设计和架构模式以及如何在AngularJS单页面应用中使用它们。</p>
-<h2 id="AngularJS概览">AngularJS概览</h2><p>AngularJS提供了一个用于开发CRUD单页应用SPA的稳健基础。<br>单页应用是说一旦网页完成加载，用户进行任何操作都无需重现加载完整的网页。意味着所有应用资源（数据，模板，代码，样式）都应该预先完成加载，或者按需加载。大部分CRUD应用都包含共通的特质，AngularJS提供了一套经过优化的现成工具实现来满足此要求。包括：</p>
-<blockquote>
-<p>双向数据绑定<br>依赖注入<br>关注点分离<br>可测试性<br>抽象化<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/12/angular-learn-3/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
@@ -877,7 +829,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2015 Balsam
+    		&copy; 2016 Balsam
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
