@@ -242,8 +242,8 @@
     <article id="post-javascript-learn-12" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/javascript-learn-12/" class="article-date">
-  	<time datetime="2016-01-05T14:18:21.890Z" itemprop="datePublished">2016-01-05</time>
+      <a href="/2015/12/javascript-learn-12/" class="article-date">
+  	<time datetime="2015-12-30T15:06:53.000Z" itemprop="datePublished">2015-12-30</time>
 </a>
     </div>
   
@@ -252,33 +252,53 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/javascript-learn-12/">Javascript学习12</a>
+    </h1>
+  
+
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>BLANK    [ \t\n]+<br>%%<br>//Whitespace<br>{BLANK}  /<em>ignore</em>/<br>//Literals<br>[0-9]+    yylval = atoi (yytext); return T_NUMBER;<br>//Keywords<br>“end”  yylval = yytext; return T_END;<br>//…</p>
-<p>%%{<br>machine lexer;</p>
-<p>#Machine<br>number        = [0-=]+;<br>whitespace    = “ “;<br>keyword        = “end” | “def” | “class” | “if” | “else” | “true” | “false” | “nil”;</p>
-<p>#Actions<br>main := |<em><br>    whitespace; #ignore<br>    number        =&gt;{ tokens &lt;&lt; [:NUMBER,data[ts..te].to_i] };<br>    keyword        =&gt;{ tokens &lt;&lt; [data[ts…te].upcase.to_sym, data[ts…te]] };
-</em>|;</p>
-<p>class Lexer<br>    def initialize<br>        %% write data;<br>    end</p>
-<pre><code>def run(<span class="type">data</span>)
-    eof = <span class="type">data</span>.<span class="built_in">size</span>
-    line = <span class="number">1</span>
-    tokens = []
-    %% <span class="built_in">write</span> init;
-    %% <span class="built_in">write</span> exec;
-    tokens
-<span class="keyword">end</span>
-</code></pre><p>end<br>}%%</p>
-<p>if tasty == True:<br>    print “Delicious!”</p>
-
+        <p>languages are still build from a lexer,a parser and a compiler。</p>
+<p>绝大多数的动态语言都是分成四部分的:the lexer,the parser,the interpreter and the runtime.</p>
+<p>我们将要创造的语言叫Awesome，使用Ruby语法和Python缩进，长下面模样：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Awesome</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="string">"I'm Awesome"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">awesomeness</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="number">100</span></span><br><span class="line"></span><br><span class="line">awesome = Awesome.new</span><br><span class="line"></span><br><span class="line">print(awesome.name)</span><br><span class="line"></span><br><span class="line">print(awesome.awesomeness)</span><br></pre></td></tr></table></figure>
+<p>我们这门语言的规则是：</p>
+<p>1.代码块靠缩进</p>
+<p>2.使用class关键字定义类</p>
+<p>3.任何地方都可以定义方法，使用def关键字</p>
+<p>4.大写开头的标记符是全局可访问的常量</p>
+<p>5.小写开头的是局部变量</p>
+<p>6.如果一个方法没有参数，小括号可省略，Ruby是如此的</p>
+<p>7.所有都是对象</p>
+<h2 id="Lexer">Lexer</h2><p>lexer，或者说scanner，tokenizer，用来把将要运行的代码转换成parser能理解的符号（tokens）</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">print "I ate",</span><br><span class="line"></span><br><span class="line"><span class="code">        3,</span></span><br><span class="line"></span><br><span class="line"><span class="code">        pies</span></span><br><span class="line"></span><br><span class="line">//代码通过lexer后是这样子的：</span><br><span class="line"></span><br><span class="line">[<span class="link_label">IDENTIFIER print</span>] [<span class="link_label">STRING "I ate"</span>] [<span class="link_label">COMMA</span>][<span class="link_reference">NUMBER 3</span>] [COMMA&#125;&#123;IDENTIFIER pies]</span><br></pre></td></tr></table></figure>
+<p>分词器分割代码，让parser更好上手。可以用正则表达式实现分词器，更好用的一些工具也早有了</p>
+<p><code>Flex</code>是Lex的现代版本，由谷歌CEOEric Schmidt实现的，用于C语言，跟yacc一样，Lex很流行啊。有Ruby版本的Rex，Java版本的JFlex。Lex的语法长下面模样</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">BLANK	[ \t\n]+</span><br><span class="line"></span><br><span class="line">%%</span><br><span class="line"></span><br><span class="line"><span class="comment">//Whitespace</span></span><br><span class="line"></span><br><span class="line">&#123;BLANK&#125;  <span class="comment">/*ignore*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Literals</span></span><br><span class="line"></span><br><span class="line">[<span class="number">0</span>-<span class="number">9</span>]+    yylval = atoi (yytext); <span class="keyword">return</span> T_NUMBER;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Keywords</span></span><br><span class="line"></span><br><span class="line"><span class="string">"end"</span>  yylval = yytext; <span class="keyword">return</span> T_END;</span><br><span class="line"></span><br><span class="line"><span class="comment">//...</span></span><br></pre></td></tr></table></figure>
+<p>左边是正则表达式，右边是相应动作。更多细节可以查看Flex Manual</p>
       
     </div>
     
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/30天js/">30天js</a></li></ul>
+	</div>
+
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/javascript-learn-12/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
