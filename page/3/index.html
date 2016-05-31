@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/30天js/" style="font-size: 20px;">30天js</a> <a href="/tags/Angular/" style="font-size: 16.67px;">Angular</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/职业生涯/" style="font-size: 13.33px;">职业生涯</a>
+						<a href="/tags/30天js/" style="font-size: 20px;">30天js</a> <a href="/tags/Angular/" style="font-size: 16.67px;">Angular</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/javscript/" style="font-size: 10px;">javscript</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a> <a href="/tags/职业生涯/" style="font-size: 13.33px;">职业生涯</a> <a href="/tags/那些未尽的事情啊/" style="font-size: 10px;">那些未尽的事情啊</a>
 					</div>
 				</section>
 				
@@ -176,6 +176,209 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-angular-learn-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/angular-learn-2/" class="article-date">
+  	<time datetime="2015-12-20T04:23:08.000Z" itemprop="datePublished">2015-12-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/angular-learn-2/">Angular学习2</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-多个控制器多个视图(Multiple_Controllers,Multiple_Views)">1.多个控制器多个视图(Multiple Controllers,Multiple Views)</h2><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">myApp.controller(<span class="string">"mainController"</span>,[<span class="string">'$scope'</span>,<span class="string">'$filter'</span>,<span class="string">'$http'</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>,<span class="variable">$log</span>,<span class="variable">$timeout</span>,<span class="variable">$filter</span>,<span class="variable">$http</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name=<span class="string">'main'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line">myApp.controller(<span class="string">'secondController'</span>,[<span class="string">"$scope"</span>,<span class="keyword">function</span>(<span class="variable">$scope</span>)&#123;</span><br><span class="line">  <span class="variable">$scope</span>.name = <span class="string">'second'</span>;</span><br><span class="line">&#125;]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"mainController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">      &lt;div ng-controller=<span class="string">"secondController"</span>&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123; name &#125;&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/angular-learn-2/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-angular-learn-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/angular-learn-1/" class="article-date">
+  	<time datetime="2015-12-19T10:59:28.000Z" itemprop="datePublished">2015-12-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/angular-learn-1/">Angular学习1</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Angular学习第一篇，好好学习。<br>内容包括1.模块和控制器 2.依赖注入 3.scope 4.函数和字符串 5.数组和函数 6.作用域和插值 7.指令和双向绑定 8.事件循环 9.观察者和消费循环  10.通用指令 11.XHR</p>
+<h2 id="1-理念">1.理念</h2><ul>
+<li><p>Model<br>var fistname = ‘Tony’</p>
+</li>
+<li><p>View</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>Tony<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>*</p>
+</li>
+</ul>
+<p>以上就是MV*架构</p>
+<h2 id="2-自定义属性(Custom_Attributes)">2.自定义属性(Custom Attributes)</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 replay=<span class="string">"Hello replay"</span>&gt;<span class="constant">Hello,Custom&lt;</span>/h1&gt;</span><br><span class="line"></span><br><span class="line"><span class="regexp">//app</span>.js文件中：</span><br><span class="line">console.log(<span class="variable">$(</span><span class="string">'h1'</span>).attr(<span class="string">'replay'</span>));</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span>输出结果为<span class="constant">Hello </span>replay</span><br></pre></td></tr></table></figure>
+<p>虽然浏览器解释器不能正确解析，但是replay在内存中存在，DOM中存在</p>
+<p>Angular使用了自定义属性ng-<em>*</em><br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/angular-learn-1/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-javascript-learn-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/javascript-learn-1/" class="article-date">
+  	<time datetime="2015-12-19T07:40:03.000Z" itemprop="datePublished">2015-12-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/javascript-learn-1/">Javascript学习1219</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-键值对/对象">1.键值对/对象</h2><p>键值对：键可能多次定义，但在特定context中只有唯一的一个值。值本身可能也是键值对。<br>对象：键值对的集合</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">Address</span>:<span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">Street</span>:<span class="value"><span class="string">'Main'</span>,</span><br><span class="line">	Number:<span class="number">100</span>,</span><br><span class="line">	Apartment:&#123;</span><br><span class="line">		Floor:<span class="number">3</span>,</span><br><span class="line">		Number:<span class="number">301</span></span><br><span class="line">	</span></span></span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Address是一个对象</p>
+<h2 id="2-全局作用域，全局对象">2.全局作用域，全局对象</h2><p>js代码一旦执行，就产生了‘全局对象’和‘this’</p>
+<p>在浏览器中 this===window===frames</p>
+<h2 id="3-执行上下文，变量提升">3.执行上下文，变量提升</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">b();</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello World'</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Called b!'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出：</span></span><br><span class="line">Called b!</span><br><span class="line"><span class="literal">undefined</span></span><br></pre></td></tr></table></figure>
+<p>变量提升的原因:</p>
+<p>Creation Phase(创建阶段)：<br>    ‘this’,外部环境，为变量和函数申请内存</p>
+<p>在代码执行前，变量和函数在内存中已经存在了，代码的执行是一行一行的，a已经在内存中存在了，但是解释器不知道变量a的具体内容，所以显示’undefined’，如果是a不定义，则显示’Uncaught ReferenceError’(因为a在内存中不存在)</p>
+<p><strong>Javascript中，初始化值都是undefined</strong>,undefined是一种特殊值</p>
+<p>Execution Phase(执行阶段):<br>    链接-编译-解释-执行<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/30天js/">30天js</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/javascript-learn-1/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-how-to-setup-jekyll-blog" class="article article-type-post" itemscope itemprop="blogPost">
   
